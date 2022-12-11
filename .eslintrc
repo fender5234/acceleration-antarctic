@@ -9,4 +9,7 @@ env:
   browser: true
   commonjs: true
 
+globals:
+  ymaps: readonly
+
 extends: "./eslintconfig.cjs"

@@ -125,7 +125,7 @@ module.exports = {
     'at-rule-no-unknown': [
       true,
       {
-        ignoreAtRules: ['mixin', 'define-mixin', 'include', 'content', 'rules', 'each'],
+        ignoreAtRules: ['content', 'define-mixin', 'each', 'if', 'include', 'mixin', 'rules'],
       },
     ],
     'at-rule-no-vendor-prefix': true,
@@ -158,6 +158,6 @@ module.exports = {
     'color-no-invalid-hex': true,
     'color-no-hex': null,
     'color-named': 'never',
-    'number-max-precision': 2,
+    'number-max-precision': 8,
   },
 };

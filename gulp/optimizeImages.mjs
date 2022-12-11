@@ -1,59 +1,35 @@
 import gulp from 'gulp';
-import rename from 'gulp-rename';
 import imagemin from 'gulp-imagemin';
-import webp from 'gulp-webp';
-import svgstore from 'gulp-svgstore';
-import pngQuant from 'imagemin-pngquant';
 import mozJpeg from 'imagemin-mozjpeg';
-import svgo from 'imagemin-svgo';
+import pngQuant from 'imagemin-pngquant';
+import svgoPlugin from 'imagemin-svgo';
+
+import svgoConfig from '../svgo.config.js';
+import webp from 'gulp-webp';
+import {stacksvg} from 'gulp-stacksvg';
+
+const optimizeRasters = imagemin([
+  pngQuant({
+    speed: 1,
+    strip: true,
+    dithering: 1,
+    quality: [0.8, 0.9],
+    optimizationLevel: 3,
+  }),
+  mozJpeg({quality: 75, progressive: true}),
+]);
+
+const svgo = () =>
+  gulp
+    .src('source/img/**/*.{svg}')
+    .pipe(imagemin([svgoPlugin(svgoConfig)]))
+    .pipe(gulp.dest('source/img'));
 
 const sprite = () =>
   gulp
-      .src('source/img/sprite/*.svg')
-      .pipe(svgstore({inlineSvg: true}))
-      .pipe(rename('sprite.svg'))
-      .pipe(gulp.dest('build/img'));
-
-const optimizeSvg = () =>
-  gulp
-      .src('build/img/**/*.svg')
-      .pipe(
-          imagemin([
-            svgo({
-              plugins: [
-                {
-                  name: 'removeViewBox',
-                  active: false,
-                },
-                {
-                  name: 'removeRasterImages',
-                  active: true,
-                },
-                {
-                  name: 'removeUselessStrokeAndFill',
-                  active: false,
-                }],
-            })]))
-      .pipe(gulp.dest('build/img'));
-
-const optimizeJpg = () =>
-  gulp
-      .src('build/img/**/*.{jpg,jpeg}')
-      .pipe(imagemin([mozJpeg({quality: 90, progressive: true})]))
-      .pipe(gulp.dest('build/img'));
-
-const optimizePng = () =>
-  gulp
-      .src('build/img/**/*.png')
-      .pipe(
-          imagemin([
-            pngQuant({
-              speed: 1,
-              strip: true,
-              dithering: 1,
-              quality: [0.8, 0.9],
-            })]))
-      .pipe(gulp.dest('build/img'));
+    .src('source/img/sprite/*.svg')
+    .pipe(stacksvg({output: 'sprite'}))
+    .pipe(gulp.dest('build/img'));
 
 /*
   Optional tasks
@@ -69,9 +45,13 @@ const optimizePng = () =>
 const createWebp = () => {
   const root = '';
   return gulp
-      .src(`source/img/${root}**/*.{png,jpg}`)
-      .pipe(webp({quality: 90}))
-      .pipe(gulp.dest(`source/img/${root}`));
+    .src(`source/img/${root}**/*.{png,jpg}`)
+    .pipe(optimizeRasters)
+    .pipe(webp({quality: 75}))
+    .pipe(gulp.dest(`source/img/${root}`));
 };
 
-export {sprite, createWebp, optimizeSvg, optimizePng, optimizeJpg};
+const optimizeImages = () =>
+  gulp.src('build/**/*.{png,jpg}', {base: 'build'}).pipe(optimizeRasters).pipe(gulp.dest('build'));
+
+export {svgo, sprite, createWebp, optimizeImages};

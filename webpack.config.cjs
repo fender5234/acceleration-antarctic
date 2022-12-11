@@ -19,7 +19,7 @@ module.exports = {
     path: path.resolve(__dirname, 'build/js'),
   },
   optimization: {
-    minimize: isDev ? false : true,
+    minimize: !isDev,
   },
   module: {
     rules: [
@@ -30,12 +30,8 @@ module.exports = {
         options: {
           presets: ['@babel/preset-env'],
         },
-      }
+      },
     ],
   },
-  plugins: [
-    new CleanWebpackPlugin(),
-    new DuplicatePackageCheckerPlugin(),
-    new CircularDependencyPlugin()
-  ],
+  plugins: [new CleanWebpackPlugin(), new DuplicatePackageCheckerPlugin(), new CircularDependencyPlugin()],
 };

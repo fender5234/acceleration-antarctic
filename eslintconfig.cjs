@@ -172,7 +172,7 @@ module.exports = {
     'comma-dangle': [
       'error',
       {
-        arrays: 'never',
+        arrays: 'always-multiline',
         objects: 'always-multiline',
         imports: 'never',
         exports: 'never',

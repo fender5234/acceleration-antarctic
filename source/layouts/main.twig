@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Antarctic</title>
+
+		<link rel="stylesheet" href="css/style.min.css{{ version }}">
+	</head>
+
+	<body>
+		<div class="page">
+			{% block header %}
+				<header class="header">
+					<div class="container">
+						<a {{ page == 'index' ? 'aria-current="page"' : 'href="index.html"' }} class="header__logo logo-link" aria-label="Переход на главную страницу">
+							<img class="header__logo-image" src="img/logo.svg" height="38" width="70" alt="Логотип компании - Круизы по Антарктике"/>
+						</a>
+						<nav class="header__nav nav">
+							<ul class="header__nav-list nav__list">
+								<li class="header__nav-list-item  nav__list-item">
+									<a href="#" class="header__nav-link nav__link">Преимущества</a>
+								</li>
+								<li class="header__nav-list-item nav__list-item">
+									<a href="#" class="header__nav-link nav__link">Направления</a>
+								</li>
+								<li class="header__nav-list-item nav__list-item">
+									<a href="#" class="header__nav-link nav__link">Ближайшие круизы</a>
+								</li>
+								<li class="header__nav-list-item nav__list-item">
+									<a href="#" class="header__nav-link nav__link">Контакты</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</header>
+			{% endblock %}
+
+			<main>
+				{% block main %}{% endblock %}
+			</main>
+
+			{% block footer %}
+				<footer class="footer">
+					<div class="container">
+						<a {{ page == 'index' ? 'aria-current="page"' : 'href="index.html"' }} class="logo-link" aria-label="Переход на главную страницу">
+							<img src="img/logo.svg" height="38" width="70" alt="Логотип компании - Круизы по Антарктике"/>
+						</a>
+					</div>
+					<nav class="nav">
+						<ul class="nav__list">
+							<li class="nav__list-item">
+								<a href="#" class="nav__link">Преимущества</a>
+							</li>
+							<li class="nav__list-item">
+								<a href="#" class="nav__link">Направления</a>
+							</li>
+							<li class="nav__list-item">
+								<a href="#" class="nav__link">Ближайшие круизы</a>
+							</li>
+							<li class="nav__list-item">
+								<a href="#" class="nav__link">Контакты</a>
+							</li>
+						</ul>
+					</nav>
+
+					<ul class="footer__social-list">
+						<li><a href="https://ok.ru/" aria-label="Социальная сеть Одноклассники"></a></li>
+						<li><a href="https://dzen.ru/" aria-label="Социальная сеть Яндекс Дзен"></a></li>
+						<li><a href="https://www.reddit.com/" aria-label="Социальная сеть Reddit"></a></li>
+					</ul>
+				</footer>
+			{% endblock %}
+		</div>
+
+		{% include 'modules/scripts.twig' %}
+	</body>
+</html>

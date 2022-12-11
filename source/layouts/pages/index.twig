@@ -1,0 +1,109 @@
+{% extends '../main.twig' %}
+
+{% block main %}
+	<section class="promo">
+		<div class="container">
+			<h1>
+				Круизы в Антарктику
+			</h1>
+			<p>Волшебный мир айсбергов и пингвинов</p>
+		</div>
+	</section>
+	<section class="description">
+		<div class="container">
+			<h2>Путешествие на край Земли</h2>
+			<p>
+				Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром Антарктики.Наш круизный лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги,несколько видов пингвинов, китов, морских котиков и многое другое.
+			</p>
+			<img src="https://via.placeholder.com/560x301" alt="Фотография Пингвины">
+		</div>
+	</section>
+	<section class="advantages">
+		<div class="container">
+			<h2>Преимущества</h2>
+			<ul>
+				<li>
+					<h3>Небольшой круизный лайнер</h3>
+					<p>Круизный лайнер, рассчитанный всего лишь на 300 гостей, поможет избежать шума и очередей и даст возможность насладиться видами и природой.</p>
+				</li>
+				<li>
+					<h3>Система все включено</h3>
+					<p>Все наши круизы работают по системе “Все Включено”. Великолепные блюда и безлимитный бар доступны для вас 24 часа.</p>
+				</li>
+				<li>
+					<h3>Экскурсионные туры на Zodiac</h3>
+					<p>Экскурсионные туры к берегам Антарктиды совершаются на оборудованных лодках типа Zodiack c опытными экскурсоводами.
+					</p>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section class="offer">
+		<div class="container">
+			<h2>Ближайшие круизы</h2>
+			<ul>
+				<li><a href="#">Круиз "Астория"</a></li>
+				<li><a href="#">Круиз "Элайн"</a></li>
+				<li><a href="#">Круиз "Атлантис"</a></li>
+				<li><a href="#">Круиз "Одиссей"</a></li>
+				<li><a href="#">Круиз "Олимпия"</a></li>
+				<li><a href="#">Круиз "Аврора"</a></li>
+				<li><a href="#">Круиз "Леонор"</a></li>
+				<li><a href="#">Круиз "Минион -1"</a></li>
+			</ul>
+		</div>
+	</section>
+	<section class="feedback">
+		<div class="container">
+			<h2>Ранее бронирование</h2>
+			<p>Забронируйте тур за 3-6 месяцев до даты выезда и сэкономьте до 50%</p>
+			<form action="https://echo.htmlacademy.ru/courses" method="get" data-form="">
+				<fieldset>
+					<legend class="visually-hidden">Форма обратной связи.</legend>
+					<p>
+						<label>
+							<span class="visually-hidden">Введите ваше имя.</span>
+							<input type="text" placeholder="Имя" name="name" pattern="^[A-Za-zА-Яа-яЁё\- ]+$" required/>
+						</label>
+						<label>
+							<span class="visually-hidden">Введите ваш номер телефона.</span>
+							<input type="tel" placeholder="Телефон" name="phone" pattern="^\+7\(\d{3}\)\d{7}$" data-mask="+7(###)#######" required/>
+						</label>
+						<label>
+							<span class="visually-hidden">Введите ваш номер телефона.</span>
+							<input type="email" placeholder="Email" name="email" required/>
+						</label>
+					</p>
+				</fieldset>
+				<fieldset>
+					<legend class="visually-hidden">Согласие на обработку персональных данных</legend>
+					<p>
+						<label>
+							<input name="agreement" type="checkbox" checked required/>
+							<span>Я согласен на обработку персональных данных</span>
+						</label>
+						<button type="submit">Оставить заявку</button>
+					</p>
+				</fieldset>
+			</form>
+		</div>
+	</section>
+	<section class="contacts">
+		<div class="container">
+			<div class="map">
+				<iframe title="map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A41a8d73c57ff87d8cae602c5185893fb11090eb89677c98457c43e65cf2693ae&amp;source=constructor" width="560" height="306"></iframe>
+			</div>
+			<h2>
+				У вас ещё остались вопросы или сомнения? Приезжайте к нам в офис и мы вам все расскажем.
+			</h2>
+			<ul>
+				<li>
+					<address>г. Санкт Петербург, ул. Большая Конюшенная, 19/8</address>
+				</li>
+				<li>
+					<a href="tel:88002000000">8-800-200-00-00</a>
+				</li>
+			</ul>
+		</div>
+	</section>
+{% endblock %}

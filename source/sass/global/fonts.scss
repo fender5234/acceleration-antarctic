@@ -1,21 +1,16 @@
-// @font-face {
-//   font-style: normal;
-//   font-weight: 400;
-//   font-family: "Rouble";
+@mixin ff-montserrat($font-weight) {
+  $url: "../fonts/montserrat-#{$font-weight}";
 
-//   font-display: swap;
-//   src:
-//     url("../fonts/rouble.woff2") format("woff2"),
-//     url("../fonts/rouble.woff") format("woff");
-// }
-
-@font-face {
-  font-style: normal;
-  font-weight: 400;
-  font-family: "";
-
-  font-display: swap;
-  src:
-    url("../fonts/.woff2") format("woff2"),
-    url("../fonts/.woff") format("woff");
+  @font-face {
+    font-style: normal;
+    font-weight: $font-weight;
+    font-family: "Montserrat";
+    font-display: swap;
+    src: url("#{$url}.woff2") format("woff2"), url("#{$url}.woff") format("woff");
+  }
 }
+
+@include ff-montserrat(400);
+@include ff-montserrat(500);
+@include ff-montserrat(600);
+@include ff-montserrat(700);

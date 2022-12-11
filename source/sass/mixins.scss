@@ -1,11 +1,45 @@
+@mixin visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
+
+@mixin default-interactive($active: true) {
+  transition: opacity $trans-default;
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+
+  @if $active {
+    @include active {
+      opacity: 0.5;
+    }
+  }
+}
+
 @mixin retina {
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    @content;
+    html & {
+      @content;
+    }
   }
 }
 
 @mixin hover {
   @media (hover: hover) {
+    &:hover,
     &:hover:not(.focus-visible) {
       @content;
     }
@@ -13,48 +47,42 @@
 }
 
 @mixin focus {
-  &.focus-visible:focus {
+  &:focus-visible {
     @content;
+  }
+
+  @supports not selector(:focus-visible) {
+    &.focus-visible:focus {
+      @content;
+    }
   }
 }
 
 @mixin active {
-  &.focus-visible:active {
-    @content;
+  @media (hover: hover) {
+    &:active,
+    &:hover:active,
+    &.focus-visible:active {
+      @content;
+    }
   }
 }
 
 @mixin hover-focus {
-  @media (hover: hover) {
-    &:hover:not(.focus-visible) {
-      @content;
-    }
-  }
-
-  &.focus-visible:focus {
+  @include hover {
     @content;
   }
+
+  @include focus {
+    @content;
+  }
+}
+
+@mixin mask($icon) {
+  mask: url("../img/sprite.svg##{$icon}") no-repeat center / 100%;
 }
 
 // Desktop first
-
-@mixin vp-1919 {
-  @media (max-width: ($vp-1920 - 1px)) {
-    @content;
-  }
-}
-
-@mixin vp-1439 {
-  @media (max-width: ($vp-1440 - 1px)) {
-    @content;
-  }
-}
-
-@mixin vp-1279 {
-  @media (max-width: ($vp-1280 - 1px)) {
-    @content;
-  }
-}
 
 @mixin vp-1023 {
   @media (max-width: ($vp-1024 - 1px)) {
@@ -68,51 +96,8 @@
   }
 }
 
-@mixin vp-374 {
-  @media (max-width: ($vp-375 - 1px)) {
+@mixin vp-599 {
+  @media (max-width: ($vp-600 - 1px)) {
     @content;
   }
 }
-
-// Mobile first
-
-// @mixin vp-375 {
-//   @media (min-width: $vp-375) {
-//     @content;
-//   }
-// }
-
-// @mixin vp-768 {
-//   @media (min-width: $vp-768) {
-//     @content;
-//   }
-// }
-
-// @mixin vp-1024 {
-//   @media (min-width: $vp-1024) {
-//     @content;
-//   }
-// }
-
-// @mixin vp-1280 {
-//   @media (min-width: $vp-1280) {
-//     @content;
-//   }
-// }
-
-// @mixin vp-1440 {
-//   @media (min-width: $vp-1440) {
-//     @content;
-//   }
-// }
-
-// @mixin vp-1920 {
-//   @media (min-width: $vp-1920) {
-//     @content;
-//   }
-// }
-
-// ---------------------------------
-
-// не нужно добавлять свои миксины для ресета списков, обнуления кнопок и прочие
-// этим вы усложняете работу команды, проверку вашего кода и будущую поддержку проекта

@@ -9,7 +9,7 @@ const SELECTORS = [
   'object',
   'embed',
   '[contenteditable]',
-  '[tabindex]:not([tabindex^="-"])'
+  '[tabindex]:not([tabindex^="-"])',
 ];
 
 export class FocusLock {
@@ -41,7 +41,11 @@ export class FocusLock {
         return;
       }
     }
-    if (evt.key === 'Tab' && !evt.shiftKey && activeElement === this._focusableElements[this._focusableElements.length - 1]) {
+    if (
+      evt.key === 'Tab' &&
+      !evt.shiftKey &&
+      activeElement === this._focusableElements[this._focusableElements.length - 1]
+    ) {
       evt.preventDefault();
       this._focusableElements[0].focus();
     }
@@ -65,7 +69,9 @@ export class FocusLock {
       this._endElement.blur();
     }
     if (startElement && startFocus) {
-      startElement.focus();
+      setTimeout(() => {
+        startElement.focus();
+      }, 33);
     }
     document.addEventListener('keydown', this._documentKeydownHandler);
   }

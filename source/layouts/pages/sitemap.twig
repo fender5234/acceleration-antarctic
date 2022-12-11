@@ -1,0 +1,23 @@
+{% extends '../main.twig' %}
+
+{% block header %}{% endblock %}
+
+{% block main %}
+	<section class="container">
+		<h1>Разводящая страница</h1>
+		<p>Для удобства тестирования и для быстрого доступа к нужной странице.</p>
+		<ol>
+			{% for page in pages %}
+				<li>
+					<a href="{{ page.id }}.html">
+						{{ page.title }}
+						—
+						{{ page.id }}.html
+					</a>
+				</li>
+			{% endfor %}
+		</ol>
+	</section>
+{% endblock %}
+
+{% block footer %}{% endblock %}
