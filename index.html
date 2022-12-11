@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antarctic</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="container">
+        <a aria-current="page" class="header__logo logo-link" aria-label="Переход на главную страницу">
+          <img class="header__logo-image" src="img/logo.svg" height="38" width="70" alt="Логотип компании - Круизы по Антарктике">
+        </a>
+        <nav class="header__nav nav">
+          <ul class="header__nav-list nav__list">
+            <li class="header__nav-list-item  nav__list-item">
+              <a href="#" class="header__nav-link nav__link">Преимущества</a>
+            </li>
+            <li class="header__nav-list-item nav__list-item">
+              <a href="#" class="header__nav-link nav__link">Направления</a>
+            </li>
+            <li class="header__nav-list-item nav__list-item">
+              <a href="#" class="header__nav-link nav__link">Ближайшие круизы</a>
+            </li>
+            <li class="header__nav-list-item nav__list-item">
+              <a href="#" class="header__nav-link nav__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+
+      <section class="promo">
+        <div class="container">
+          <h1>
+            Круизы в&nbsp;Антарктику
+          </h1>
+          <p>Волшебный мир айсбергов и&nbsp;пингвинов</p>
+        </div>
+      </section>
+
+      <section class="description">
+        <div class="container">
+          <h2>Путешествие на&nbsp;край Земли</h2>
+          <p>
+            Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики.Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.
+          </p>
+          <img src="https://via.placeholder.com/560x301" alt="Фотография Пингвины">
+        </div>
+      </section>
+
+      <section class="advantages">
+        <div class="container">
+          <h2>Преимущества</h2>
+          <ul>
+            <li>
+              <h3>Небольшой круизный лайнер</h3>
+              <p>Круизный лайнер, рассчитанный всего лишь на&nbsp;300 гостей, поможет избежать шума и&nbsp;очередей и&nbsp;даст возможность насладиться видами и&nbsp;природой.</p>
+            </li>
+            <li>
+              <h3>Система все включено</h3>
+              <p>Все наши круизы работают по&nbsp;системе &laquo;Все Включено&raquo;. Великолепные блюда и&nbsp;безлимитный бар доступны для вас 24 часа.</p>
+            </li>
+            <li>
+              <h3>Экскурсионные туры на&nbsp;Zodiac</h3>
+              <p>Экскурсионные туры к&nbsp;берегам Антарктиды совершаются на&nbsp;оборудованных лодках типа Zodiack c&nbsp;опытными экскурсоводами.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="offer">
+        <div class="container">
+          <h2>Ближайшие круизы</h2>
+          <ul>
+            <li><a href="#">Круиз &laquo;Астория&raquo;</a></li>
+            <li><a href="#">Круиз &laquo;Элайн&raquo;</a></li>
+            <li><a href="#">Круиз &laquo;Атлантис&raquo;</a></li>
+            <li><a href="#">Круиз &laquo;Одиссей&raquo;</a></li>
+            <li><a href="#">Круиз &laquo;Олимпия&raquo;</a></li>
+            <li><a href="#">Круиз &laquo;Аврора&raquo;</a></li>
+            <li><a href="#">Круиз &laquo;Леонор&raquo;</a></li>
+            <li><a href="#">Круиз &laquo;Минион -1&raquo;</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="feedback">
+        <div class="container">
+          <h2>Ранее бронирование</h2>
+          <p>Забронируйте тур за&nbsp;3-6 месяцев до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
+          <form action="https://echo.htmlacademy.ru/courses" method="get" data-form="">
+            <fieldset>
+              <legend class="visually-hidden">Форма обратной связи.</legend>
+              <p>
+                <label>
+                  <span class="visually-hidden">Введите ваше имя.</span>
+                  <input type="text" placeholder="Имя" name="name" pattern="^[A-Za-zА-Яа-яЁё\- ]+$" required="">
+                </label>
+                <label>
+                  <span class="visually-hidden">Введите ваш номер телефона.</span>
+                  <input type="tel" placeholder="Телефон" name="phone" pattern="^\+7\(\d{3}\)\d{7}$" data-mask="+7(###)#######" required="">
+                </label>
+                <label>
+                  <span class="visually-hidden">Введите ваш номер телефона.</span>
+                  <input type="email" placeholder="Email" name="email" required="">
+                </label>
+              </p>
+            </fieldset>
+            <fieldset>
+              <legend class="visually-hidden">Согласие на&nbsp;обработку персональных данных</legend>
+              <p>
+                <label>
+                  <input name="agreement" type="checkbox" checked="" required="">
+                  <span>Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
+                </label>
+                <button type="submit">Оставить заявку</button>
+              </p>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+
+      <section class="contacts">
+        <div class="container">
+          <div class="map">
+            <iframe title="map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A41a8d73c57ff87d8cae602c5185893fb11090eb89677c98457c43e65cf2693ae&amp;source=constructor" width="560" height="306"></iframe>
+          </div>
+          <h2>
+            У&nbsp;вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.
+          </h2>
+          <ul>
+            <li>
+              <address>г. Санкт Петербург, ул.&nbsp;Большая Конюшенная, 19/8</address>
+            </li>
+            <li>
+              <a href="tel:88002000000">8-800-200-00-00</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <a aria-current="page" class="logo-link" aria-label="Переход на главную страницу">
+          <img src="img/logo.svg" height="38" width="70" alt="Логотип компании - Круизы по Антарктике">
+        </a>
+      </div>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__list-item">
+            <a href="#" class="nav__link">Преимущества</a>
+          </li>
+          <li class="nav__list-item">
+            <a href="#" class="nav__link">Направления</a>
+          </li>
+          <li class="nav__list-item">
+            <a href="#" class="nav__link">Ближайшие круизы</a>
+          </li>
+          <li class="nav__list-item">
+            <a href="#" class="nav__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <ul class="footer__social-list">
+        <li><a href="https://ok.ru/" aria-label="Социальная сеть Одноклассники"></a></li>
+        <li><a href="https://dzen.ru/" aria-label="Социальная сеть Яндекс Дзен"></a></li>
+        <li><a href="https://www.reddit.com/" aria-label="Социальная сеть Reddit"></a></li>
+      </ul>
+    </footer>
+  </div>
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+</html>
