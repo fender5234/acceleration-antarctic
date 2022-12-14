@@ -9,48 +9,57 @@
 
 <body>
   <div class="page">
-    <header class="header">
-      <div class="container">
-        <a aria-current="page" class="header__logo logo-link" aria-label="Переход на главную страницу">
-          <img class="header__logo-image" src="img/logo.svg" height="38" width="70" alt="Логотип компании - Круизы по Антарктике">
-        </a>
-        <nav class="header__nav nav">
-          <ul class="header__nav-list nav__list">
-            <li class="header__nav-list-item  nav__list-item">
-              <a href="#" class="header__nav-link nav__link">Преимущества</a>
-            </li>
-            <li class="header__nav-list-item nav__list-item">
-              <a href="#" class="header__nav-link nav__link">Направления</a>
-            </li>
-            <li class="header__nav-list-item nav__list-item">
-              <a href="#" class="header__nav-link nav__link">Ближайшие круизы</a>
-            </li>
-            <li class="header__nav-list-item nav__list-item">
-              <a href="#" class="header__nav-link nav__link">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <main>
+    <div class="header-top">
+      <header class="header">
+        <div class="header__container container">
+          <a aria-current="page" class="header__logo logo-link" aria-label="Переход на главную страницу">
+            <img class="header__logo-image" src="img/logo.svg" height="38" width="70" alt="Логотип компании - Круизы по Антарктике">
+          </a>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__list-item">
+                <a href="#" class="nav__link">Преимущества</a>
+              </li>
+              <li class="nav__list-item">
+                <a href="#" class="nav__link">Направления</a>
+              </li>
+              <li class="nav__list-item">
+                <a href="#" class="nav__link">Ближайшие круизы</a>
+              </li>
+              <li class="nav__list-item">
+                <a href="#" class="nav__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
 
       <section class="promo">
-        <div class="container">
+        <div class="promo-container container">
           <h1>
             Круизы в&nbsp;Антарктику
           </h1>
           <p>Волшебный мир айсбергов и&nbsp;пингвинов</p>
         </div>
       </section>
+    </div>
+
+    <main>
 
       <section class="description">
-        <div class="container">
-          <h2>Путешествие на&nbsp;край Земли</h2>
-          <p>
-            Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики.Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.
-          </p>
-          <img src="https://via.placeholder.com/560x301" alt="Фотография Пингвины">
+        <div class="description-container container">
+          <div>
+            <h2>Путешествие на&nbsp;край Земли</h2>
+            <p>
+              Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики.Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.
+            </p>
+          </div>
+          <picture>
+            <source type="image/webp" media="(max-width: 320px)" srcset="img/promo-mobile.webp 1x, img/promo-mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/promo-tablet.webp 1x, img/promo-tablet@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/promo-desktop.webp, img/promo-desktop@2x.webp 2x">
+            <img src="img/promo-desktop.jpg" srcset="img/promo-desktop@2x.jpg 2x" alt="Фотография Пингвины">
+          </picture>
         </div>
       </section>
 
@@ -170,9 +179,15 @@
         </ul>
       </nav>
       <ul class="footer__social-list">
-        <li><a href="https://ok.ru/" aria-label="Социальная сеть Одноклассники"></a></li>
-        <li><a href="https://dzen.ru/" aria-label="Социальная сеть Яндекс Дзен"></a></li>
-        <li><a href="https://www.reddit.com/" aria-label="Социальная сеть Reddit"></a></li>
+        <li>
+          <a href="https://ok.ru/" aria-label="Социальная сеть Одноклассники"></a>
+        </li>
+        <li>
+          <a href="https://dzen.ru/" aria-label="Социальная сеть Яндекс Дзен"></a>
+        </li>
+        <li>
+          <a href="https://www.reddit.com/" aria-label="Социальная сеть Reddit"></a>
+        </li>
       </ul>
     </footer>
   </div>
