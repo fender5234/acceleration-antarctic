@@ -1,0 +1,29 @@
+.description {
+  background-color: $color-alice-blue;
+}
+
+.description-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 120px 45px 145px;
+  grid-gap: 0 40px;
+}
+
+.description h2 {
+  margin: 0 0 24px 0;
+  padding-top: 56px;
+  font-size: 28px;
+  font-family: $ff-montserrat;
+  line-height: 42px;
+  font-weight: 600;
+  color: $color-tangaroa;
+}
+
+.description p {
+  margin: 0;
+  padding-right: 30px;
+  font-size: 16px;
+  font-family: $ff-montserrat;
+  line-height: 24px;
+  color: $color-tangaroa;
+}

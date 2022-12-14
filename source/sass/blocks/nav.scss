@@ -1,0 +1,23 @@
+.nav {
+  margin-left: auto;
+}
+
+.nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 8px 0 0;
+  list-style-type: none;
+}
+
+.nav__link {
+  font-size: 16px;
+  font-family: $ff-montserrat;
+  line-height: 20px;
+  font-weight: 500;
+  color: $color-alice-blue;
+}
+
+.nav__list-item {
+  margin-left: 33px;
+}

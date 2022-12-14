@@ -1,21 +1,20 @@
 {% extends '../main.twig' %}
 
 {% block main %}
-	<section class="promo">
-		<div class="container">
-			<h1>
-				Круизы в Антарктику
-			</h1>
-			<p>Волшебный мир айсбергов и пингвинов</p>
-		</div>
-	</section>
 	<section class="description">
-		<div class="container">
-			<h2>Путешествие на край Земли</h2>
-			<p>
-				Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром Антарктики.Наш круизный лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги,несколько видов пингвинов, китов, морских котиков и многое другое.
-			</p>
-			<img src="https://via.placeholder.com/560x301" alt="Фотография Пингвины">
+		<div class="description-container container">
+			<div>
+				<h2>Путешествие на край Земли</h2>
+				<p>
+					Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром Антарктики.Наш круизный лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги,несколько видов пингвинов, китов, морских котиков и многое другое.
+				</p>
+			</div>
+			<picture>
+				<source type="image/webp" media="(max-width: 320px)" srcset="img/promo-mobile.webp 1x, img/promo-mobile@2x.webp 2x">
+				<source type="image/webp" media="(max-width: 1023px)" srcset="img/promo-tablet.webp 1x, img/promo-tablet@2x.webp 2x">
+				<source type="image/webp" media="(min-width: 1024px)" srcset="img/promo-desktop.webp, img/promo-desktop@2x.webp 2x">
+				<img src="img/promo-desktop.jpg" srcset="img/promo-desktop@2x.jpg 2x" alt="Фотография Пингвины">
+			</picture>
 		</div>
 	</section>
 	<section class="advantages">

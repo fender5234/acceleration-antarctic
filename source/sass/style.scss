@@ -11,6 +11,12 @@
 
 // Blocks
 @import "blocks/btn";
+@import "blocks/nav";
+@import "blocks/header";
+@import "blocks/page";
+@import "blocks/header-top";
+@import "blocks/promo.scss";
+@import "blocks/description.scss";
 
 // ❗ обязательно используйте миксины hover-focus и active для отключения ховеров на тач устройствах
 // адаптив пишем внутри каждого класса

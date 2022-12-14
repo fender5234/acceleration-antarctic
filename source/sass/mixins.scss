@@ -101,3 +101,26 @@
     @content;
   }
 }
+
+@mixin adaptive-bg($filename, $ext: "jpg") {
+  $webp: url("../img/#{$filename}.webp");
+  $webp-2x: url("../img/#{$filename}@2x.webp");
+
+  @supports not (background-image: $webp) {
+    background-image: url("../img/#{$filename}.#{$ext}");
+  }
+
+  @supports (background-image: $webp) {
+    background-image: $webp;
+  }
+
+  @include retina {
+    @supports not (background-image: $webp-2x) {
+      background-image: url("../img/#{$filename}@2x.#{$ext}");
+    }
+
+    @supports (background-image: $webp-2x) {
+      background-image: $webp-2x;
+    }
+  }
+}

@@ -10,30 +10,40 @@
 
 	<body>
 		<div class="page">
-			{% block header %}
-				<header class="header">
-					<div class="container">
-						<a {{ page == 'index' ? 'aria-current="page"' : 'href="index.html"' }} class="header__logo logo-link" aria-label="Переход на главную страницу">
-							<img class="header__logo-image" src="img/logo.svg" height="38" width="70" alt="Логотип компании - Круизы по Антарктике"/>
-						</a>
-						<nav class="header__nav nav">
-							<ul class="header__nav-list nav__list">
-								<li class="header__nav-list-item  nav__list-item">
-									<a href="#" class="header__nav-link nav__link">Преимущества</a>
-								</li>
-								<li class="header__nav-list-item nav__list-item">
-									<a href="#" class="header__nav-link nav__link">Направления</a>
-								</li>
-								<li class="header__nav-list-item nav__list-item">
-									<a href="#" class="header__nav-link nav__link">Ближайшие круизы</a>
-								</li>
-								<li class="header__nav-list-item nav__list-item">
-									<a href="#" class="header__nav-link nav__link">Контакты</a>
-								</li>
-							</ul>
-						</nav>
-					</div>
-				</header>
+			<div class="header-top">
+				{% block header %}
+					<header class="header">
+						<div class="header__container container">
+							<a {{ page == 'index' ? 'aria-current="page"' : 'href="index.html"' }} class="header__logo logo-link" aria-label="Переход на главную страницу">
+								<img class="header__logo-image" src="img/logo.svg" height="38" width="70" alt="Логотип компании - Круизы по Антарктике"/>
+							</a>
+							<nav class="nav">
+								<ul class="nav__list">
+									<li class="nav__list-item">
+										<a href="#" class="nav__link">Преимущества</a>
+									</li>
+									<li class="nav__list-item">
+										<a href="#" class="nav__link">Направления</a>
+									</li>
+									<li class="nav__list-item">
+										<a href="#" class="nav__link">Ближайшие круизы</a>
+									</li>
+									<li class="nav__list-item">
+										<a href="#" class="nav__link">Контакты</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</header>
+					<section class="promo">
+						<div class="promo-container container">
+							<h1>
+								Круизы в Антарктику
+							</h1>
+							<p>Волшебный мир айсбергов и пингвинов</p>
+						</div>
+					</section>
+				</div>
 			{% endblock %}
 
 			<main>
@@ -63,11 +73,16 @@
 							</li>
 						</ul>
 					</nav>
-
 					<ul class="footer__social-list">
-						<li><a href="https://ok.ru/" aria-label="Социальная сеть Одноклассники"></a></li>
-						<li><a href="https://dzen.ru/" aria-label="Социальная сеть Яндекс Дзен"></a></li>
-						<li><a href="https://www.reddit.com/" aria-label="Социальная сеть Reddit"></a></li>
+						<li>
+							<a href="https://ok.ru/" aria-label="Социальная сеть Одноклассники"></a>
+						</li>
+						<li>
+							<a href="https://dzen.ru/" aria-label="Социальная сеть Яндекс Дзен"></a>
+						</li>
+						<li>
+							<a href="https://www.reddit.com/" aria-label="Социальная сеть Reddit"></a>
+						</li>
 					</ul>
 				</footer>
 			{% endblock %}

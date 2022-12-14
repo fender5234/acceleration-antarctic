@@ -1,0 +1,8 @@
+.header-top {
+  background-color: $color-tangaroa;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include adaptive-bg("background-desktop");
+}
