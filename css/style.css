@@ -717,6 +717,92 @@ input[type=number]::-webkit-inner-spin-button {
   color: #011c40;
 }
 
+.advantages h2 {
+  text-align: center;
+  margin: 0 0 49px;
+  font-size: 28px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  line-height: 42px;
+  font-weight: 600;
+  color: #011c40;
+}
+
+.advantages-container {
+  padding: 110px 45px 120px;
+}
+
+.advantages {
+  background-color: #011c40;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@supports not (background-image: url("../img/advantages-background-desktop.webp")) {
+  .advantages {
+    background-image: url("../img/advantages-background-desktop.jpg");
+  }
+}
+
+@supports (background-image: url("../img/advantages-background-desktop.webp")) {
+  .advantages {
+    background-image: url("../img/advantages-background-desktop.webp");
+  }
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0 40px;
+}
+
+.advantages__list h3 {
+  margin: 0 0 8px;
+  padding: 0;
+  font-size: 18px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  line-height: 27px;
+  font-weight: 500;
+  color: #011c40;
+}
+
+.advantages__list p {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  line-height: 20px;
+  color: #011c40;
+}
+
+.advantages__list li {
+  background-color: #f9fbfd;
+  padding: 30px 30px 46px;
+}
+
+.advantages__list img {
+  margin-bottom: 18px;
+}
+
+.offer h2 {
+  text-align: center;
+  margin: 0 0 49px;
+  font-size: 28px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  line-height: 42px;
+  font-weight: 600;
+  color: #011c40;
+}
+
+.offer ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 @media (min-width: 768px) {
   .mobile-show {
     display: none;
@@ -756,6 +842,18 @@ input[type=number]::-webkit-inner-spin-button {
 @supports (background-image: url("../img/background-desktop@2x.webp")) {
     html .header-top {
       background-image: url("../img/background-desktop@2x.webp");
+    }
+}
+
+@supports not (background-image: url("../img/advantages-background-desktop@2x.webp")) {
+    html .advantages {
+      background-image: url("../img/advantages-background-desktop@2x.jpg");
+    }
+}
+
+@supports (background-image: url("../img/advantages-background-desktop@2x.webp")) {
+    html .advantages {
+      background-image: url("../img/advantages-background-desktop@2x.webp");
     }
 }
 }
