@@ -1,0 +1,59 @@
+.advantages h2 {
+  text-align: center;
+  margin: 0 0 49px;
+  font-size: 28px;
+  font-family: $ff-montserrat;
+  line-height: 42px;
+  font-weight: 600;
+  color: $color-tangaroa;
+}
+
+.advantages-container {
+  padding: 110px 45px 120px;
+}
+
+.advantages {
+  background-color: $color-tangaroa;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include adaptive-bg("advantages-background-desktop");
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0 40px;
+}
+
+.advantages__list h3 {
+  margin: 0 0 8px;
+  padding: 0;
+  font-size: 18px;
+  font-family: $ff-montserrat;
+  line-height: 27px;
+  font-weight: 500;
+  color: $color-tangaroa;
+}
+
+.advantages__list p {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: $ff-montserrat;
+  line-height: 20px;
+  color: $color-tangaroa;
+}
+
+.advantages__list li {
+  background-color: $color-alice-blue;
+  padding: 30px 30px 46px;
+}
+
+.advantages__list img {
+  margin-bottom: 18px;
+}
