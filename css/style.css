@@ -789,7 +789,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 .offer h2 {
   text-align: center;
-  margin: 0 0 49px;
+  margin: 0 0 50px;
   font-size: 28px;
   font-family: "Montserrat", "Arial", sans-serif;
   line-height: 42px;
@@ -798,9 +798,74 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .offer ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
   margin: 0;
-  padding: 0;
+  padding: 0 15px;
   list-style-type: none;
+}
+
+.offer-container {
+  padding: 85px 45px 0;
+}
+
+.offer li {
+  height: 386px;
+  position: relative;
+  padding: 29px 25px 14px;
+  background-color: #011c40;
+}
+
+.offer h3 {
+  margin: 0 0 12px;
+  font-size: 18px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  line-height: 27px;
+  font-weight: 500;
+  color: #f9fbfd;
+}
+
+.offer h4 {
+  margin: 0 0 1px;
+  font-size: 14px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  line-height: 20px;
+  font-weight: 500;
+  color: #f9fbfd;
+}
+
+.offer p {
+  margin: 0 0 11px;
+  font-size: 14px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  line-height: 20px;
+  color: #f9fbfd;
+}
+
+.offer a {
+  display: block;
+  margin-top: 25px;
+  text-align: center;
+  background-color: #f9fbfd;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  padding: 10px 20px;
+}
+
+.offer a:hover {
+  transition: all 1s ease-out;
+  background-color: #2772b8;
+}
+
+.offer picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 @media (min-width: 768px) {
