@@ -18,18 +18,34 @@
 }
 
 .offer-container {
-  padding: 85px 45px 0;
+  padding: 85px 45px 119px;
 }
 
 .offer li {
   height: 386px;
+  overflow-y: hidden;
   position: relative;
   padding: 29px 25px 14px;
   background-color: $color-tangaroa;
+
+  @include hover {
+    .offer__title {
+      margin: 0 0 12px;
+    }
+
+    .offer__content {
+      display: block;
+    }
+
+    .offer__picture {
+      display: none;
+    }
+  }
 }
 
 .offer h3 {
-  margin: 0 0 12px;
+  position: relative;
+  margin: 307px 0 12px 5px;
   font-size: 18px;
   font-family: $ff-montserrat;
   line-height: 27px;
@@ -64,17 +80,16 @@
   font-size: 14px;
   line-height: 21px;
   padding: 10px 20px;
-
-  &:hover {
-    transition: all 1s ease-out;
-    background-color: #2772b8;
-  }
 }
 
-.offer picture {
+.offer img {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+.offer__content {
+  display: none;
 }

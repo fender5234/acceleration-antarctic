@@ -1,0 +1,117 @@
+.feedback {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #acd5fa;
+
+  @include adaptive-bg("background-feedback-desktop");
+}
+
+.feedback__text-title {
+  margin: 0 0 8px;
+  padding: 0;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+  font-family: $ff-montserrat;
+  color: $color-tangaroa;
+}
+
+.feedback__text-subtitle {
+  margin: 0;
+  padding-right: 250px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  font-family: $ff-montserrat;
+  color: $color-tangaroa;
+}
+
+.feedback-container {
+  display: flex;
+  padding: 50px 105px;
+}
+
+.feedback__text {
+  padding: 163px 0 0;
+}
+
+.feedback__form-group {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 27px 0 0;
+
+  &--bottom {
+    padding: 0;
+  }
+}
+
+.feedback fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.feedback__form {
+  padding: 44px 50px;
+  max-width: 403px;
+  background-color: $color-tangaroa;
+}
+
+.feedback__form-description {
+  margin: 0;
+  font-weight: 500;
+  font-size: 18px;
+  font-family: $ff-montserrat;
+  line-height: 27px;
+  color: $color-alice-blue;
+}
+
+.feedback__form-group span {
+  font-family: $ff-montserrat;
+  font-size: 10px;
+  line-height: 13px;
+  color: $color-alice-blue;
+  vertical-align: super;
+}
+
+.feedback input:not([type="checkbox"]) {
+  padding: 10px 2px 12px 16px;
+  font-family: $ff-montserrat;
+  font-size: 14px;
+  line-height: 21px;
+  width: 100%;
+  border: none;
+  margin: 0 0 20px;
+  color: rgba(1, 28, 64, 0.7);
+  background-color: $color-alice-blue;
+}
+
+.feedback input[type="checkbox"] {
+  position: relative;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background-color: $color-alice-blue;
+
+  &:checked {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 3px;
+      width: 11px;
+      height: 10px;
+      mask-image: url("/img/sprite/arrow.svg");
+      mask-repeat: no-repeat;
+      background-color: #101a56;
+    }
+  }
+}
+
+.feedback input {
+  &:focus-visible {
+    outline: 2px solid $color-alice-blue;
+  }
+}
