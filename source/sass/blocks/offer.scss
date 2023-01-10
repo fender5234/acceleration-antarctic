@@ -6,6 +6,11 @@
   line-height: 42px;
   font-weight: 600;
   color: $color-tangaroa;
+
+  @include vp-1023 {
+    font-size: 26px;
+    line-height: 39px;
+  }
 }
 
 .offer ul {
@@ -15,21 +20,37 @@
   margin: 0;
   padding: 0 15px;
   list-style-type: none;
+
+  @include vp-1023 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .offer-container {
   padding: 85px 45px 119px;
+
+  @include vp-1023 {
+    padding: 89px 45px 100px;
+  }
 }
 
 .offer li {
+  display: flex;
+  flex-direction: column;
   height: 386px;
-  overflow-y: hidden;
   position: relative;
   padding: 29px 25px 14px;
   background-color: $color-tangaroa;
 
-  @include hover {
-    .offer__title {
+  @include vp-1023 {
+    padding: 29px 35px 14px;
+  }
+
+  &:hover,
+  &:focus-within {
+    overflow-y: auto;
+
+    h3 {
       margin: 0 0 12px;
     }
 
@@ -37,7 +58,7 @@
       display: block;
     }
 
-    .offer__picture {
+    img {
       display: none;
     }
   }
@@ -45,12 +66,17 @@
 
 .offer h3 {
   position: relative;
-  margin: 307px 0 12px 5px;
+  margin: auto 0 9px 5px;
   font-size: 18px;
   font-family: $ff-montserrat;
   line-height: 27px;
   font-weight: 500;
   color: $color-alice-blue;
+  z-index: 1;
+
+  @include vp-1023 {
+    margin: auto 0 13px 0;
+  }
 }
 
 .offer h4 {

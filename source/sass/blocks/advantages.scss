@@ -6,10 +6,19 @@
   line-height: 42px;
   font-weight: 600;
   color: $color-tangaroa;
+
+  @include vp-1023 {
+    font-size: 26px;
+    line-height: 39px;
+  }
 }
 
 .advantages-container {
   padding: 110px 45px 120px;
+
+  @include vp-1023 {
+    padding: 90px 45px 100px;
+  }
 }
 
 .advantages {
@@ -19,6 +28,10 @@
   background-size: cover;
 
   @include adaptive-bg("advantages-background-desktop");
+
+  @include vp-1023 {
+    @include adaptive-bg("advantages-background-tablet");
+  }
 }
 
 .advantages__list {
@@ -28,6 +41,12 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 0 40px;
+  align-items: flex-start;
+
+  @include vp-1023 {
+    align-items: stretch;
+    grid-gap: 29px;
+  }
 }
 
 .advantages__list h3 {
@@ -52,8 +71,16 @@
 .advantages__list li {
   background-color: $color-alice-blue;
   padding: 30px 30px 46px;
+
+  @include vp-1023 {
+    padding: 26px 10px 19px 20px;
+  }
 }
 
 .advantages__list img {
   margin-bottom: 18px;
+
+  @include vp-1023 {
+    width: 34px;
+  }
 }

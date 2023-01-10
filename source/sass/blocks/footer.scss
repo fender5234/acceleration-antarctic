@@ -1,0 +1,104 @@
+.footer {
+  background-color: $color-tangaroa;
+}
+
+.footer-container {
+  display: flex;
+  padding: 50px 41px 32px 45px;
+
+  @include vp-1023 {
+    padding: 48px 36px 32px 45px;
+  }
+}
+
+.footer__logo {
+  margin: 0;
+
+  @include vp-1023 {
+    padding-top: 2px;
+    width: 40px;
+  }
+}
+
+.footer__nav {
+  margin: 0 0 0 8px;
+}
+
+.footer__social-list {
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 auto;
+  padding-top: 4px;
+  list-style-type: none;
+
+  @include vp-1023 {
+    padding: 0;
+  }
+}
+
+.footer__social-link {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  mask-repeat: no-repeat;
+  mask-size: cover;
+
+  &:focus-visible {
+    outline: 2px solid $color-alice-blue;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: $color-alice-blue;
+
+    @include vp-1023 {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &--ok {
+    &::before {
+      top: 5px;
+      left: 7px;
+      mask-image: url("/img/sprite.svg#icon-ok");
+    }
+  }
+
+  &--dzen {
+    &::before {
+      top: 5px;
+      left: 4px;
+      mask-image: url("/img/sprite.svg#icon-dzen");
+    }
+  }
+
+  &--reddit {
+    &::before {
+      top: 5px;
+      left: 5px;
+      mask-image: url("/img/sprite.svg#icon-reddit");
+    }
+  }
+}
+
+.footer__social-list-item {
+  margin-left: 16px;
+
+  @include vp-1023 {
+    margin-left: 8px;
+  }
+}
+
+.footer__nav .nav__link {
+  @include vp-1023 {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}

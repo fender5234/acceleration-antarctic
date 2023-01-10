@@ -5,4 +5,8 @@
   background-size: cover;
 
   @include adaptive-bg("background-desktop");
+
+  @include vp-1023 {
+    @include adaptive-bg("background-tablet");
+  }
 }

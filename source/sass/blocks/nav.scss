@@ -1,5 +1,9 @@
 .nav {
   margin-left: auto;
+
+  @include vp-1023 {
+    margin: 0;
+  }
 }
 
 .nav__list {
@@ -8,6 +12,10 @@
   margin: 0;
   padding: 8px 0 0;
   list-style-type: none;
+
+  @include vp-1023 {
+    padding: 0;
+  }
 }
 
 .nav__link {
@@ -16,8 +24,17 @@
   line-height: 20px;
   font-weight: 500;
   color: $color-alice-blue;
+
+  @include vp-1023 {
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
 
 .nav__list-item {
   margin-left: 33px;
+
+  @include vp-1023 {
+    margin-left: 23px;
+  }
 }

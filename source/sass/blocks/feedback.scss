@@ -5,6 +5,10 @@
   background-color: #acd5fa;
 
   @include adaptive-bg("background-feedback-desktop");
+
+  @include vp-1023 {
+    @include adaptive-bg("background-feedback-tablet");
+  }
 }
 
 .feedback__text-title {
@@ -15,25 +19,48 @@
   line-height: 60px;
   font-family: $ff-montserrat;
   color: $color-tangaroa;
+
+  @include vp-1023 {
+    font-size: 34px;
+    line-height: 51px;
+    margin: 0 0 5px;
+  }
 }
 
 .feedback__text-subtitle {
   margin: 0;
-  padding-right: 250px;
+  max-width: 352px;
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
   font-family: $ff-montserrat;
   color: $color-tangaroa;
+
+  @include vp-1023 {
+    margin: 0 auto 52px;
+    font-size: 18px;
+    line-height: 27px;
+  }
 }
 
 .feedback-container {
   display: flex;
   padding: 50px 105px;
+  justify-content: space-between;
+
+  @include vp-1023 {
+    display: block;
+    padding: 88px 45px 100px;
+  }
 }
 
 .feedback__text {
   padding: 163px 0 0;
+
+  @include vp-1023 {
+    text-align: center;
+    padding: 0;
+  }
 }
 
 .feedback__form-group {
@@ -54,9 +81,13 @@
 }
 
 .feedback__form {
-  padding: 44px 50px;
+  padding: 44px 50px 50px;
   max-width: 403px;
   background-color: $color-tangaroa;
+
+  @include vp-1023 {
+    margin: 0 auto;
+  }
 }
 
 .feedback__form-description {
@@ -73,7 +104,7 @@
   font-size: 10px;
   line-height: 13px;
   color: $color-alice-blue;
-  vertical-align: super;
+  padding-left: 6px;
 }
 
 .feedback input:not([type="checkbox"]) {
@@ -89,6 +120,7 @@
 }
 
 .feedback input[type="checkbox"] {
+  flex-shrink: 0;
   position: relative;
   appearance: none;
   width: 18px;
@@ -114,4 +146,20 @@
   &:focus-visible {
     outline: 2px solid $color-alice-blue;
   }
+}
+
+.feedback button {
+  font-family: $ff-montserrat;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 600;
+  background-color: $color-alice-blue;
+  padding: 11px 15px;
+  border: none;
+}
+
+.feedback__form-group--bottom label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
 }

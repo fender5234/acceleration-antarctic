@@ -52,38 +52,38 @@
 
 			{% block footer %}
 				<footer class="footer">
-					<div class="container">
-						<a {{ page == 'index' ? 'aria-current="page"' : 'href="index.html"' }} class="logo-link" aria-label="Переход на главную страницу">
+					<div class="footer-container container">
+						<a {{ page == 'index' ? 'aria-current="page"' : 'href="index.html"' }} class="logo-link footer__logo" aria-label="Переход на главную страницу">
 							<img src="img/logo.svg" height="38" width="70" alt="Логотип компании - Круизы по Антарктике"/>
 						</a>
-					</div>
-					<nav class="nav">
-						<ul class="nav__list">
-							<li class="nav__list-item">
-								<a href="#" class="nav__link">Преимущества</a>
+						<nav class="nav footer__nav">
+							<ul class="nav__list">
+								<li class="nav__list-item">
+									<a href="#" class="nav__link">Преимущества</a>
+								</li>
+								<li class="nav__list-item">
+									<a href="#" class="nav__link">Направления</a>
+								</li>
+								<li class="nav__list-item">
+									<a href="#" class="nav__link">Ближайшие круизы</a>
+								</li>
+								<li class="nav__list-item">
+									<a href="#" class="nav__link">Контакты</a>
+								</li>
+							</ul>
+						</nav>
+						<ul class="footer__social-list">
+							<li class="footer__social-list-item">
+								<a class="footer__social-link footer__social-link--ok" href="https://ok.ru/" aria-label="Социальная сеть Одноклассники"></a>
 							</li>
-							<li class="nav__list-item">
-								<a href="#" class="nav__link">Направления</a>
+							<li class="footer__social-list-item">
+								<a class="footer__social-link footer__social-link--dzen" href="https://dzen.ru/" aria-label="Социальная сеть Яндекс Дзен"></a>
 							</li>
-							<li class="nav__list-item">
-								<a href="#" class="nav__link">Ближайшие круизы</a>
-							</li>
-							<li class="nav__list-item">
-								<a href="#" class="nav__link">Контакты</a>
+							<li class="footer__social-list-item">
+								<a class="footer__social-link footer__social-link--reddit" href="https://www.reddit.com/" aria-label="Социальная сеть Reddit"></a>
 							</li>
 						</ul>
-					</nav>
-					<ul class="footer__social-list">
-						<li>
-							<a href="https://ok.ru/" aria-label="Социальная сеть Одноклассники"></a>
-						</li>
-						<li>
-							<a href="https://dzen.ru/" aria-label="Социальная сеть Яндекс Дзен"></a>
-						</li>
-						<li>
-							<a href="https://www.reddit.com/" aria-label="Социальная сеть Reddit"></a>
-						</li>
-					</ul>
+					</div>
 				</footer>
 			{% endblock %}
 		</div>

@@ -1,0 +1,90 @@
+.contacts h2 {
+  margin: 0;
+  padding: 0;
+  font-family: $ff-montserrat;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+}
+
+.contacts ul {
+  font-family: $ff-montserrat;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+  padding: 32px 0 0 28px;
+  list-style-type: none;
+
+  @include vp-1023 {
+    padding: 27px 33px 0 28px;
+  }
+}
+
+.contacts address {
+  font-style: normal;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -28px;
+    width: 18px;
+    height: 22px;
+    background-color: $color-tangaroa;
+    mask-image: url("/img/sprite.svg#icon-marker");
+
+    @include vp-1023 {
+      top: 5px;
+    }
+  }
+}
+
+.contacts-container {
+  display: flex;
+  padding: 120px 45px;
+
+  @include vp-1023 {
+    padding: 98px 45px 102px;
+  }
+}
+
+.contacts iframe {
+  border: none;
+}
+
+.contacts__content {
+  padding: 75px 0 0 100px;
+
+  @include vp-1023 {
+    padding: 68px 0 0 30px;
+  }
+}
+
+.contacts li {
+  position: relative;
+  margin-bottom: 21px;
+}
+
+.contacts a {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -28px;
+    width: 18px;
+    height: 22px;
+    background-color: $color-tangaroa;
+    mask-image: url("/img/sprite.svg#icon-tel");
+  }
+}
+
+.contacts__map {
+  flex-shrink: 0;
+  width: 560px;
+  height: 306px;
+
+  @include vp-1023 {
+    width: 324px;
+    height: 335px;
+  }
+}

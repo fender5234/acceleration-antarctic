@@ -6,6 +6,11 @@
   line-height: 65px;
   font-family: $ff-montserrat;
   color: $color-alice-blue;
+
+  @include vp-1023 {
+    font-size: 50px;
+    line-height: 60px;
+  }
 }
 
 .promo p {
@@ -15,8 +20,17 @@
   line-height: 24px;
   font-family: $ff-montserrat;
   color: $color-alice-blue;
+
+  @include vp-1023 {
+    font-size: 18px;
+    line-height: 20px;
+  }
 }
 
 .promo-container {
   padding: 167px 50px 278px 141px;
+
+  @include vp-1023 {
+    padding: 187px 50px 277px 45px;
+  }
 }

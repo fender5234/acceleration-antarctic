@@ -1,9 +1,19 @@
 .header__container {
   display: flex;
-  padding: 33px 45px 33px;
+  padding: 33px 45px;
+
+  @include vp-1023 {
+    padding: 29px 45px;
+  }
 }
 
 .header__logo {
   flex-shrink: 0;
   margin-right: 200px;
+
+  @include vp-1023 {
+    margin-right: 114px;
+    height: 20px;
+    width: 38px;
+  }
 }
