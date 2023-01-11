@@ -640,6 +640,10 @@ input[type=number]::-webkit-inner-spin-button {
   margin-right: 200px;
 }
 
+.header__button {
+  display: none;
+}
+
 .page {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
@@ -1450,6 +1454,189 @@ input[type=number]::-webkit-inner-spin-button {
   .container {
     padding: 0 15px;
   }
+
+  .nav {
+    display: none;
+  }
+
+  .nav__link {
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  .header__container {
+    padding: 20px 15px;
+  }
+
+  .header__logo {
+    height: 25px;
+    width: 42px;
+  }
+
+  .header__button {
+    margin: 4px 0 0 auto;
+    position: relative;
+    display: block;
+    border: none;
+    width: 24px;
+    height: 16px;
+    background-color: transparent;
+  }
+
+  .header__button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 14px;
+    background-color: #f9fbfd;
+    -webkit-mask-image: url("/img/sprite/icon-burger.svg");
+    mask-image: url("/img/sprite/icon-burger.svg");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+  }
+
+@supports not (background-image: url("../img/background-mobile.webp")) {
+    .header-top {
+      background-image: url("../img/background-mobile.jpg");
+    }
+}
+
+@supports (background-image: url("../img/background-mobile.webp")) {
+    .header-top {
+      background-image: url("../img/background-mobile.webp");
+    }
+}
+
+  .promo h1 {
+    font-size: 36px;
+    line-height: 45px;
+    margin: 0 0 11px;
+  }
+
+  .promo p {
+    font-size: 16px;
+    line-height: 22px;
+    padding-right: 35px;
+  }
+
+  .promo-container {
+    padding: 111px 40px 179px 15px;
+  }
+
+  .description-container {
+    display: block;
+    padding: 57px 15px 85px;
+  }
+
+  .description h2 {
+    margin: 0 0 15px;
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .description p {
+    padding: 0 5px 43px 0;
+  }
+
+  .advantages h2 {
+    font-size: 24px;
+    margin: 0 0 29px;
+  }
+
+  .advantages-container {
+    padding: 55px 15px 35px;
+  }
+
+@supports not (background-image: url("../img/advantages-background-mobile.webp")) {
+    .advantages {
+      background-image: url("../img/advantages-background-mobile.jpg");
+    }
+}
+
+@supports (background-image: url("../img/advantages-background-mobile.webp")) {
+    .advantages {
+      background-image: url("../img/advantages-background-mobile.webp");
+    }
+}
+
+  .advantages__list {
+    display: block;
+  }
+
+  .advantages__list h3 {
+    margin: 0 0 7px;
+    padding: 0 60px 0 0;
+  }
+
+  .advantages__list p {
+    padding: 0 11px 0 0;
+  }
+
+  .advantages__list li {
+    margin-bottom: 31px;
+  }
+
+  .offer h2 {
+    font-size: 24px;
+    line-height: 36px;
+    margin: 0 0 30px;
+  }
+
+  .offer ul {
+    display: block;
+    padding: 0 10px;
+  }
+
+  .offer-container {
+    padding: 57px 15px 35px;
+  }
+
+  .offer li {
+    padding: 29px 25px 14px;
+    margin-bottom: 30px;
+  }
+
+  .offer h3 {
+    margin: auto 0 3px 0;
+  }
+
+  .feedback__text-title {
+    font-size: 24px;
+    line-height: 31px;
+  }
+
+  .feedback__text-subtitle {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+@supports not (background-image: url("../img/background-mobile@2x.webp")) {
+    html .header-top {
+      background-image: url("../img/background-mobile@2x.jpg");
+    }
+}
+
+@supports (background-image: url("../img/background-mobile@2x.webp")) {
+    html .header-top {
+      background-image: url("../img/background-mobile@2x.webp");
+    }
+}
+
+@supports not (background-image: url("../img/advantages-background-mobile@2x.webp")) {
+    html .advantages {
+      background-image: url("../img/advantages-background-mobile@2x.jpg");
+    }
+}
+
+@supports (background-image: url("../img/advantages-background-mobile@2x.webp")) {
+    html .advantages {
+      background-image: url("../img/advantages-background-mobile@2x.webp");
+    }
+}
 }
 
 @media (hover: hover) {
