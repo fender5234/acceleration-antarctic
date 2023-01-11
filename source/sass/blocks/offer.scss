@@ -11,6 +11,12 @@
     font-size: 26px;
     line-height: 39px;
   }
+
+  @include vp-767 {
+    font-size: 24px;
+    line-height: 36px;
+    margin: 0 0 30px;
+  }
 }
 
 .offer ul {
@@ -24,6 +30,11 @@
   @include vp-1023 {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  @include vp-767 {
+    display: block;
+    padding: 0 10px;
+  }
 }
 
 .offer-container {
@@ -31,6 +42,10 @@
 
   @include vp-1023 {
     padding: 89px 45px 100px;
+  }
+
+  @include vp-767 {
+    padding: 57px 15px 35px;
   }
 }
 
@@ -44,6 +59,11 @@
 
   @include vp-1023 {
     padding: 29px 35px 14px;
+  }
+
+  @include vp-767 {
+    padding: 29px 25px 14px;
+    margin-bottom: 30px;
   }
 
   &:hover,
@@ -76,6 +96,10 @@
 
   @include vp-1023 {
     margin: auto 0 13px 0;
+  }
+
+  @include vp-767 {
+    margin: auto 0 3px 0;
   }
 }
 

@@ -11,6 +11,12 @@
     font-size: 50px;
     line-height: 60px;
   }
+
+  @include vp-767 {
+    font-size: 36px;
+    line-height: 45px;
+    margin: 0 0 11px;
+  }
 }
 
 .promo p {
@@ -25,6 +31,12 @@
     font-size: 18px;
     line-height: 20px;
   }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 22px;
+    padding-right: 35px;
+  }
 }
 
 .promo-container {
@@ -32,5 +44,9 @@
 
   @include vp-1023 {
     padding: 187px 50px 277px 45px;
+  }
+
+  @include vp-767 {
+    padding: 111px 40px 179px 15px;
   }
 }
