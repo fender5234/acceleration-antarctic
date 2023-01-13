@@ -250,8 +250,6 @@ fieldset {
 */
 
 legend {
-  display: table;
-  /* 1 */
   box-sizing: border-box;
   /* 1 */
   max-width: 100%;
@@ -618,6 +616,11 @@ input[type=number]::-webkit-inner-spin-button {
   list-style-type: none;
 }
 
+.nav__list--active {
+  padding: 55px 0 0;
+  flex-direction: column;
+}
+
 .nav__link {
   font-size: 16px;
   font-family: "Montserrat", "Arial", sans-serif;
@@ -630,6 +633,11 @@ input[type=number]::-webkit-inner-spin-button {
   margin-left: 33px;
 }
 
+.nav__list-item--active {
+  padding: 10px 3px;
+  margin: 0 0 6px 0;
+}
+
 .header__container {
   display: flex;
   padding: 33px 45px;
@@ -638,6 +646,10 @@ input[type=number]::-webkit-inner-spin-button {
 .header__logo {
   flex-shrink: 0;
   margin-right: 200px;
+}
+
+.header__logo--active {
+  margin: 0 0 0 35px;
 }
 
 .header__button {
@@ -891,6 +903,10 @@ input[type=number]::-webkit-inner-spin-button {
   left: 0;
   right: 0;
   bottom: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .offer__content {
@@ -1602,14 +1618,117 @@ input[type=number]::-webkit-inner-spin-button {
     margin: auto 0 3px 0;
   }
 
+  .feedback {
+    background-position: inherit;
+  }
+
+@supports not (background-image: url("../img/background-feedback-mobile.webp")) {
+    .feedback {
+      background-image: url("../img/background-feedback-mobile.jpg");
+    }
+}
+
+@supports (background-image: url("../img/background-feedback-mobile.webp")) {
+    .feedback {
+      background-image: url("../img/background-feedback-mobile.webp");
+    }
+}
+
   .feedback__text-title {
     font-size: 24px;
     line-height: 31px;
+    margin: 0 0 14px;
   }
 
   .feedback__text-subtitle {
     font-size: 16px;
     line-height: 22px;
+    margin: 0 auto 34px;
+  }
+
+  .feedback-container {
+    padding: 59px 15px 65px;
+  }
+
+  .feedback__form-group {
+    padding: 29px 0 0;
+  }
+
+  .feedback__form-group--bottom {
+    padding: 0;
+  }
+
+  .feedback__form {
+    padding: 34px 30px 40px;
+  }
+
+  .feedback__form-description {
+    text-align: center;
+    line-height: 25px;
+  }
+
+  .feedback__form-group span {
+    padding: 0 50px 0 8px;
+    line-height: 12px;
+  }
+
+  .feedback input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+  }
+
+  .feedback__form-group--bottom label {
+    margin-bottom: 26px;
+    align-items: flex-start;
+  }
+
+  .contacts ul {
+    padding: 27px 0 0 28px;
+    margin-bottom: 36px;
+  }
+
+  .contacts-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 58px 15px 65px;
+  }
+
+  .contacts__content {
+    order: 1;
+    padding: 0;
+  }
+
+  .contacts__map {
+    width: 290px;
+    height: 316px;
+    order: 2;
+  }
+
+  .footer-container {
+    padding: 38px 15px 32px;
+    flex-direction: column;
+  }
+
+  .footer__nav {
+    display: block;
+  }
+
+  .footer__social-list {
+    margin: 0 0 0 -5px;
+  }
+
+  .footer__social-list-item {
+    margin: 0 13px 0 -5px;
+  }
+
+  .footer__nav-list {
+    flex-direction: column;
+    padding-top: 22px;
+    margin: 0 0 10px;
+  }
+
+  .footer__nav-list .nav__list-item {
+    margin: 0 0 8px;
   }
 }
 
@@ -1635,6 +1754,18 @@ input[type=number]::-webkit-inner-spin-button {
 @supports (background-image: url("../img/advantages-background-mobile@2x.webp")) {
     html .advantages {
       background-image: url("../img/advantages-background-mobile@2x.webp");
+    }
+}
+
+@supports not (background-image: url("../img/background-feedback-mobile@2x.webp")) {
+    html .feedback {
+      background-image: url("../img/background-feedback-mobile@2x.jpg");
+    }
+}
+
+@supports (background-image: url("../img/background-feedback-mobile@2x.webp")) {
+    html .feedback {
+      background-image: url("../img/background-feedback-mobile@2x.webp");
     }
 }
 }
