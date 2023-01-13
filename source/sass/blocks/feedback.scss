@@ -9,6 +9,11 @@
   @include vp-1023 {
     @include adaptive-bg("background-feedback-tablet");
   }
+
+  @include vp-767 {
+    @include adaptive-bg("background-feedback-mobile");
+    background-position: inherit;
+  }
 }
 
 .feedback__text-title {
@@ -29,6 +34,7 @@
   @include vp-767 {
     font-size: 24px;
     line-height: 31px;
+    margin: 0 0 14px;
   }
 }
 
@@ -50,6 +56,7 @@
   @include vp-767 {
     font-size: 16px;
     line-height: 22px;
+    margin: 0 auto 34px;
   }
 }
 
@@ -61,6 +68,10 @@
   @include vp-1023 {
     display: block;
     padding: 88px 45px 100px;
+  }
+
+  @include vp-767 {
+    padding: 59px 15px 65px;
   }
 }
 
@@ -79,8 +90,16 @@
   margin: 0;
   padding: 27px 0 0;
 
+  @include vp-767 {
+    padding: 29px 0 0;
+  }
+
   &--bottom {
     padding: 0;
+
+    @include vp-767 {
+      padding: 0;
+    }
   }
 }
 
@@ -98,6 +117,10 @@
   @include vp-1023 {
     margin: 0 auto;
   }
+
+  @include vp-767 {
+    padding: 34px 30px 40px;
+  }
 }
 
 .feedback__form-description {
@@ -107,6 +130,11 @@
   font-family: $ff-montserrat;
   line-height: 27px;
   color: $color-alice-blue;
+
+  @include vp-767 {
+    text-align: center;
+    line-height: 25px;
+  }
 }
 
 .feedback__form-group span {
@@ -115,6 +143,11 @@
   line-height: 13px;
   color: $color-alice-blue;
   padding-left: 6px;
+
+  @include vp-767 {
+    padding: 0 50px 0 8px;
+    line-height: 12px;
+  }
 }
 
 .feedback input:not([type="checkbox"]) {
@@ -136,6 +169,11 @@
   width: 18px;
   height: 18px;
   background-color: $color-alice-blue;
+
+  @include vp-767 {
+    width: 20px;
+    height: 20px;
+  }
 
   &:checked {
     &::after {
@@ -172,4 +210,9 @@
   display: flex;
   align-items: center;
   margin-bottom: 30px;
+
+  @include vp-767 {
+    margin-bottom: 26px;
+    align-items: flex-start;
+  }
 }

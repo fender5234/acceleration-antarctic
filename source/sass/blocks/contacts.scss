@@ -18,6 +18,12 @@
   @include vp-1023 {
     padding: 27px 33px 0 28px;
   }
+
+
+  @include vp-767 {
+    padding: 27px 0 0 28px;
+    margin-bottom: 36px;
+  }
 }
 
 .contacts address {
@@ -46,6 +52,12 @@
   @include vp-1023 {
     padding: 98px 45px 102px;
   }
+
+  @include vp-767 {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 58px 15px 65px;
+  }
 }
 
 .contacts iframe {
@@ -57,6 +69,11 @@
 
   @include vp-1023 {
     padding: 68px 0 0 30px;
+  }
+
+  @include vp-767 {
+    order: 1;
+    padding: 0;
   }
 }
 
@@ -86,5 +103,11 @@
   @include vp-1023 {
     width: 324px;
     height: 335px;
+  }
+
+  @include vp-767 {
+    width: 290px;
+    height: 316px;
+    order: 2;
   }
 }
