@@ -681,6 +681,34 @@ input[type=number]::-webkit-inner-spin-button {
   }
 }
 
+.header-top.is-active .header__logo {
+  margin: 0 0 0 35px;
+}
+
+.header-top.is-active .header-top__list {
+  padding: 75px 0 0 22px;
+  flex-direction: column;
+}
+
+.header-top.is-active .header-top__list-item {
+  padding: 10px 3px;
+  margin: 0 0 6px 0;
+}
+
+.header-top.is-active .header-top__nav {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 89%;
+  background-color: #f9fbfd;
+}
+
+.header-top.is-active .header-top__link {
+  color: #011c40;
+}
+
 .promo h1 {
   margin: 0 0 12px;
   padding: 0;
@@ -1489,17 +1517,17 @@ input[type=number]::-webkit-inner-spin-button {
     width: 42px;
   }
 
-  .header__button {
+  .header__button.is-active {
+    display: block;
     margin: 4px 0 0 auto;
     position: relative;
-    display: block;
     border: none;
     width: 24px;
     height: 16px;
     background-color: transparent;
   }
 
-  .header__button::before {
+  .header__button.is-active::before {
     content: "";
     position: absolute;
     top: 0;
@@ -1513,6 +1541,18 @@ input[type=number]::-webkit-inner-spin-button {
     mask-repeat: no-repeat;
   }
 
+  .header__button.is-open::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 24px;
+    height: 15px;
+    background-color: #011c40;
+    -webkit-mask-image: url("/img/sprite/icon-close.svg");
+    mask-image: url("/img/sprite/icon-close.svg");
+  }
+
 @supports not (background-image: url("../img/background-mobile.webp")) {
     .header-top {
       background-image: url("../img/background-mobile.jpg");
@@ -1524,6 +1564,30 @@ input[type=number]::-webkit-inner-spin-button {
       background-image: url("../img/background-mobile.webp");
     }
 }
+
+  .header-top.is-active .header__button {
+    display: block;
+    margin: 4px 0 0 auto;
+    position: relative;
+    border: none;
+    width: 24px;
+    height: 16px;
+    background-color: transparent;
+  }
+
+  .header-top.is-active .header__button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 14px;
+    background-color: #f9fbfd;
+    -webkit-mask-image: url("/img/sprite/icon-burger.svg");
+    mask-image: url("/img/sprite/icon-burger.svg");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+  }
 
   .promo h1 {
     font-size: 36px;
