@@ -14,3 +14,57 @@
     @include adaptive-bg("background-mobile");
   }
 }
+
+.header-top.is-active {
+  .header__logo {
+    margin: 0 0 0 35px;
+  }
+
+  .header-top__list {
+    padding: 75px 0 0 22px;
+    flex-direction: column;
+  }
+
+  .header-top__list-item {
+    padding: 10px 3px;
+    margin: 0 0 6px 0;
+  }
+
+  .header-top__nav {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 89%;
+    background-color: $color-alice-blue;
+  }
+
+  .header-top__link {
+    color: $color-tangaroa;
+  }
+
+  .header__button {
+    @include vp-767 {
+      display: block;
+      margin: 4px 0 0 auto;
+      position: relative;
+      border: none;
+      width: 24px;
+      height: 16px;
+      background-color: transparent;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 24px;
+        height: 14px;
+        background-color: $color-alice-blue;
+        mask-image: url("/img/sprite/icon-burger.svg");
+        mask-repeat: no-repeat;
+      }
+    }
+  }
+}

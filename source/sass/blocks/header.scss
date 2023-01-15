@@ -33,11 +33,13 @@
 
 .header__button {
   display: none;
+}
 
+.header__button.is-active {
   @include vp-767 {
+    display: block;
     margin: 4px 0 0 auto;
     position: relative;
-    display: block;
     border: none;
     width: 24px;
     height: 16px;
@@ -53,6 +55,21 @@
       background-color: $color-alice-blue;
       mask-image: url("/img/sprite/icon-burger.svg");
       mask-repeat: no-repeat;
+    }
+  }
+}
+
+.header__button.is-open {
+  @include vp-767 {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 10px;
+      width: 24px;
+      height: 15px;
+      background-color: $color-tangaroa;
+      mask-image: url("/img/sprite/icon-close.svg");
     }
   }
 }

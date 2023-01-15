@@ -1,5 +1,7 @@
 import initMaps from './modules/map.js';
+import initPageHeader from './modules/page-header.js';
 
+initPageHeader();
 // в load следует добавить скрипты, не участвующие в работе первого экрана
 window.addEventListener('load', () => {
   window.pageData = {

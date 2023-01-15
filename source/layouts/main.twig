@@ -10,30 +10,30 @@
 
 	<body>
 		<div class="page">
-			<div class="header-top">
+			<div class="header-top" data-header>
 				{% block header %}
 					<header class="header">
 						<div class="header__container container">
 							<a {{ page == 'index' ? 'aria-current="page"' : 'href="index.html"' }} class="header__logo logo-link" aria-label="Переход на главную страницу">
 								<img class="header__logo-image" src="img/logo.svg" height="38" width="70" alt="Логотип компании - Круизы по Антарктике."/>
 							</a>
-							<nav class="nav">
-								<ul class="nav__list">
-									<li class="nav__list-item">
-										<a href="#" class="nav__link">Преимущества</a>
+							<nav class="nav header-top__nav">
+								<ul class="nav__list header-top__list">
+									<li class="nav__list-item  header-top__list-item">
+										<a href="#" class="nav__link header-top__link">Преимущества</a>
 									</li>
-									<li class="nav__list-item">
-										<a href="#" class="nav__link">Направления</a>
+									<li class="nav__list-item header-top__list-item">
+										<a href="#" class="nav__link header-top__link">Направления</a>
 									</li>
-									<li class="nav__list-item">
-										<a href="#" class="nav__link">Ближайшие круизы</a>
+									<li class="nav__list-item header-top__list-item">
+										<a href="#" class="nav__link header-top__link">Ближайшие круизы</a>
 									</li>
-									<li class="nav__list-item">
-										<a href="#" class="nav__link">Контакты</a>
+									<li class="nav__list-item header-top__list-item">
+										<a href="#" class="nav__link header-top__link">Контакты</a>
 									</li>
 								</ul>
 							</nav>
-							<button class="header__button" type="button" aria-label="Кнопка для открытия меню"></button>
+							<button class="header__button" type="button" aria-label="Кнопка для открытия меню" data-button></button>
 						</div>
 					</header>
 					<section class="promo">
