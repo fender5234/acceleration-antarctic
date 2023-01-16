@@ -60,7 +60,7 @@
   }
 }
 
-.feedback-container {
+.feedback__container {
   display: flex;
   padding: 50px 105px;
   justify-content: space-between;
@@ -183,7 +183,7 @@
       left: 3px;
       width: 11px;
       height: 10px;
-      mask-image: url("/img/sprite/arrow.svg");
+      mask-image: url("../img/sprite/arrow.svg");
       mask-repeat: no-repeat;
       background-color: #101a56;
     }

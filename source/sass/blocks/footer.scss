@@ -1,8 +1,9 @@
 .footer {
   background-color: $color-tangaroa;
+  color: $color-alice-blue;
 }
 
-.footer-container {
+.footer__container {
   display: flex;
   padding: 50px 41px 32px 45px;
 
@@ -66,7 +67,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: 5px;
     left: 0;
     width: 20px;
     height: 20px;
@@ -80,25 +81,22 @@
 
   &--ok {
     &::before {
-      top: 5px;
       left: 7px;
-      mask-image: url("/img/sprite.svg#icon-ok");
+      mask-image: url("../img/sprite.svg#icon-ok");
     }
   }
 
   &--dzen {
     &::before {
-      top: 5px;
       left: 4px;
-      mask-image: url("/img/sprite.svg#icon-dzen");
+      mask-image: url("../img/sprite.svg#icon-dzen");
     }
   }
 
   &--reddit {
     &::before {
-      top: 5px;
       left: 5px;
-      mask-image: url("/img/sprite.svg#icon-reddit");
+      mask-image: url("../sprite.svg#icon-reddit");
     }
   }
 }

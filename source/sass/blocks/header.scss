@@ -51,7 +51,7 @@
       width: 24px;
       height: 14px;
       background-color: $color-alice-blue;
-      mask-image: url("/img/sprite/icon-burger.svg");
+      mask-image: url("../img/sprite/icon-burger.svg");
       mask-repeat: no-repeat;
     }
   }
@@ -97,7 +97,7 @@
         width: 26px;
         height: 17px;
         background-color: $color-tangaroa;
-        mask-image: url("/img/sprite/icon-close.svg");
+        mask-image: url("../sprite/icon-close.svg");
         mask-repeat: no-repeat;
       }
     }

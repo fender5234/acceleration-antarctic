@@ -37,7 +37,7 @@
     width: 18px;
     height: 22px;
     background-color: $color-tangaroa;
-    mask-image: url("/img/sprite.svg#icon-marker");
+    mask-image: url("../img/sprite.svg#icon-marker");
 
     @include vp-1023 {
       top: 5px;
@@ -45,7 +45,7 @@
   }
 }
 
-.contacts-container {
+.contacts__container {
   display: flex;
   padding: 120px 45px;
 
@@ -91,7 +91,7 @@
     width: 18px;
     height: 22px;
     background-color: $color-tangaroa;
-    mask-image: url("/img/sprite.svg#icon-tel");
+    mask-image: url("../img/sprite.svg#icon-tel");
   }
 }
 

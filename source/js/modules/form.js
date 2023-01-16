@@ -1,9 +1,7 @@
 export default (formElement, id = 0) => {
-  const groupElements = formElement.querySelectorAll('[data-group]');
-  let firstSubmit = true;
+  const fieldElements = formElement.querySelector('[name]');
 
-  groupElements.forEach((groupElement) => {
-    const fieldElement = groupElement.querySelector('[name]');
+  fieldElements.forEach((fieldElement) => {
     const {name, type} = fieldElement;
 
     if (type === 'password') {
@@ -17,26 +15,9 @@ export default (formElement, id = 0) => {
     }
 
     fieldElement.addEventListener('change', () => {
-      groupElement.classList.add('is-validable');
-
       if (fieldElement.checkValidity()) {
         localStorage.setItem(fieldId, fieldElement.value);
       }
     });
-
-    groupElement.classList.remove('is-validable');
   });
-
-  formElement.addEventListener('submit', (evt) => {
-    if (firstSubmit) {
-      groupElements.forEach((groupElement) => groupElement.classList.add('is-validable'));
-      firstSubmit = false;
-    }
-
-    if (!formElement.checkValidity()) {
-      evt.preventDefault();
-    }
-  });
-
-  formElement.setAttribute('novalidate', '');
 };

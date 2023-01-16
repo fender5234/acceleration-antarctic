@@ -22,16 +22,17 @@
   }
 }
 
+.nav__list-item {
+  margin-left: 33px;
+
+  @include vp-1023 {
+    margin-left: 23px;
+  }
+}
+
 .nav__link {
-  font-size: 16px;
-  font-family: $ff-montserrat;
   line-height: 20px;
   font-weight: 500;
-  color: inherit;
-
-  &--footer {
-    color: $color-alice-blue;
-  }
 
   @include vp-1023 {
     font-size: 14px;
@@ -44,10 +45,25 @@
   }
 }
 
-.nav__list-item {
-  margin-left: 33px;
+.nav--footer {
+  .nav__list {
+    @include vp-767 {
+      flex-direction: column;
+      padding-top: 16px;
+      margin: 0 0 10px;
+    }
+  }
 
-  @include vp-1023 {
-    margin-left: 23px;
+  .nav__list-item {
+    @include vp-767 {
+      margin: 0 0 8px;
+    }
+  }
+
+  .nav__link {
+    @include vp-1023 {
+      font-size: 12px;
+      line-height: 14px;
+    }
   }
 }

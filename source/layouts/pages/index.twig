@@ -2,7 +2,7 @@
 
 {% block main %}
 	<section class="description">
-		<div class="description-container container">
+		<div class="description__container container">
 			<div>
 				<h2>Путешествие на край Земли</h2>
 				<p>
@@ -18,7 +18,7 @@
 		</div>
 	</section>
 	<section class="advantages" id="advantages">
-		<div class="advantages-container container">
+		<div class="advantages__container container">
 			<h2>Преимущества</h2>
 			<ul class="advantages__list">
 				<li>
@@ -41,7 +41,7 @@
 		</div>
 	</section>
 	<section class="offer" id="offer">
-		<div class="offer-container container">
+		<div class="offer__container container">
 			<h2>Ближайшие круизы</h2>
 			<ul>
 				<li>
@@ -184,7 +184,7 @@
 		</div>
 	</section>
 	<section class="feedback" id="feedback">
-		<div class="feedback-container container">
+		<div class="feedback__container container">
 			<div class="feedback__text">
 				<h2 class="feedback__text-title">Раннее бронирование</h2>
 				<p class="feedback__text-subtitle">Забронируйте тур за 3-6 месяцев до даты выезда и сэкономьте до 50%</p>
@@ -195,7 +195,7 @@
 				</p>
 				<fieldset>
 					<legend class="visually-hidden">Форма обратной связи.</legend>
-					<p class="feedback__form-group" data-group>
+					<p class="feedback__form-group">
 						<label aria-label="Введите ваше имя.">
 							<input id="order-name" type="text" placeholder="Имя" name="name" pattern="^[A-Za-zА-Яа-яЁё\- ]+$" required/>
 						</label>
@@ -209,7 +209,7 @@
 				</fieldset>
 				<fieldset>
 					<legend class="visually-hidden">Согласие на обработку ваших персональных данных</legend>
-					<p class="feedback__form-group feedback__form-group--bottom" data-group>
+					<p class="feedback__form-group feedback__form-group--bottom">
 						<label>
 							<input name="agree" type="checkbox" checked required/>
 							<span>Я согласен на обработку моих  персональных данных</span>
@@ -221,7 +221,7 @@
 		</div>
 	</section>
 	<section class="contacts" id="contacts">
-		<div class="contacts-container container">
+		<div class="contacts__container container">
 			<div class="contacts__map" data-map id="map"></div>
 			<div class="contacts__content">
 				<h2>
