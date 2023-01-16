@@ -246,24 +246,27 @@
             </p>
             <fieldset>
               <legend class="visually-hidden">Форма обратной связи.</legend>
-              <p class="feedback__form-group">
+              <p class="feedback__form-group" data-group="">
                 <label>
                   <span class="visually-hidden">Введите ваше имя.</span>
                   <input id="order-name" type="text" placeholder="Имя" name="name" pattern="^[A-Za-zА-Яа-яЁё\- ]+$" required="">
+                  <strong>Введите имя из&nbsp;буквенных символов, разделяемых пробелами или дефисами</strong>
                 </label>
                 <label>
                   <span class="visually-hidden">Введите ваш номер телефона.</span>
                   <input id="order-phone" type="tel" placeholder="Телефон" name="phone" pattern="^\+7\(\d{3}\)\d{7}$" data-mask="+7(###)#######" required="">
+                  <strong>Введите телефон (только цифры)</strong>
                 </label>
                 <label>
                   <span class="visually-hidden">Введите ваш номер телефона.</span>
                   <input id="order-email" type="email" placeholder="Email" name="email" required="">
+                  <strong>Введите телефон (только цифры)</strong>
                 </label>
               </p>
             </fieldset>
             <fieldset>
               <legend class="visually-hidden">Согласие на&nbsp;обработку ваших персональных данных</legend>
-              <p class="feedback__form-group feedback__form-group--bottom">
+              <p class="feedback__form-group feedback__form-group--bottom" data-group="">
                 <label>
                   <input name="agree" type="checkbox" checked="" required="">
                   <span>Я&nbsp;согласен на&nbsp;обработку моих персональных данных</span>

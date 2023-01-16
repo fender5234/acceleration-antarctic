@@ -727,6 +727,22 @@ html {
   }
 }
 
+.promo {
+  position: relative;
+}
+
+.promo::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 168px;
+  background: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%);
+  z-index: 1;
+}
+
 .promo h1 {
   margin: 0 0 12px;
   padding: 0;
@@ -748,18 +764,6 @@ html {
 
 .promo-container {
   padding: 160px 50px 278px 141px;
-}
-
-.promo-container::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 160px;
-  width: 100%;
-  height: 168px;
-  background: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%);
-  z-index: 1;
 }
 
 .description {
@@ -1129,6 +1133,33 @@ html {
   margin-bottom: 30px;
 }
 
+label[for] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+}
+
+[name] ~ strong {
+  display: none;
+  width: 100%;
+  margin: 5px 0 0;
+  font-weight: inherit;
+  font-size: 12px;
+  color: #ff6982;
+}
+
+.form__group.is-validable :invalid ~ strong {
+  display: block;
+}
+
 .contacts h2 {
   margin: 0;
   padding: 0;
@@ -1333,10 +1364,6 @@ html {
 
   .promo-container {
     padding: 187px 50px 277px 45px;
-  }
-
-  .promo-container::before {
-    content: none;
   }
 
   .description-container {
