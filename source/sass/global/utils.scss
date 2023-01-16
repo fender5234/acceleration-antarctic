@@ -21,11 +21,6 @@
   }
 }
 
-.no-transition {
-  /* stylelint-disable-next-line */
-  transition: none !important;
-}
-
 .mobile-hide {
   @include vp-767 {
     display: none;

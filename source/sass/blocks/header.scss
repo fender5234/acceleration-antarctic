@@ -29,10 +29,6 @@
     height: 25px;
     width: 42px;
   }
-
-  &--active {
-    margin: 0 0 0 35px;
-  }
 }
 
 .header__button {
@@ -82,15 +78,18 @@
     height: 100%;
     width: 89%;
     background-color: $color-alice-blue;
+    z-index: 1;
   }
 
   .header__logo {
-    z-index: 1;
+    z-index: 2;
     fill: currentColor;
     margin: -1px 0 0 10%;
   }
 
   .header__button {
+    z-index: 1;
+
     @include vp-767 {
       &::before {
         top: 0;

@@ -20,11 +20,6 @@
   @include vp-1023 {
     padding: 0;
   }
-
-  &--active {
-    padding: 55px 0 0;
-    flex-direction: column;
-  }
 }
 
 .nav__link {
@@ -54,10 +49,5 @@
 
   @include vp-1023 {
     margin-left: 23px;
-  }
-
-  &--active {
-    padding: 10px 3px;
-    margin: 0 0 6px 0;
   }
 }

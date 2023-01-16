@@ -12,6 +12,12 @@
     background: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%);
     z-index: 1;
   }
+
+  @include vp-767 {
+    &::before {
+      content: none;
+    }
+  }
 }
 
 .promo h1 {
