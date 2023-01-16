@@ -40,9 +40,25 @@
 }
 
 .promo-container {
-  padding: 167px 50px 278px 141px;
+  padding: 160px 50px 278px 141px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 160px;
+    width: 100%;
+    height: 168px;
+    background: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%);
+    z-index: 1;
+  }
 
   @include vp-1023 {
+    &::before {
+      content: none;
+    }
+
     padding: 187px 50px 277px 45px;
   }
 

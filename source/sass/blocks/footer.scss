@@ -7,7 +7,7 @@
   padding: 50px 41px 32px 45px;
 
   @include vp-1023 {
-    padding: 48px 36px 32px 45px;
+    padding: 48px 36px 26px 45px;
   }
 
   @include vp-767 {
@@ -17,11 +17,13 @@
 }
 
 .footer__logo {
+  fill: $color-alice-blue;
   margin: 0;
 
   @include vp-1023 {
     padding-top: 2px;
-    width: 40px;
+    width: 38px;
+    height: 23px;
   }
 }
 
@@ -36,12 +38,12 @@
 .footer__social-list {
   display: flex;
   align-items: center;
-  margin: 0 0 0 auto;
-  padding-top: 4px;
+  margin: -3px 0 0 auto;
+  padding: 0;
   list-style-type: none;
 
   @include vp-1023 {
-    padding: 0;
+    margin: 0 0 0 auto;
   }
 
   @include vp-767 {
@@ -123,7 +125,7 @@
 .footer__nav-list {
   @include vp-767 {
     flex-direction: column;
-    padding-top: 22px;
+    padding-top: 16px;
     margin: 0 0 10px;
   }
 }

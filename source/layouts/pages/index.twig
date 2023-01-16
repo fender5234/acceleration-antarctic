@@ -17,7 +17,7 @@
 			</picture>
 		</div>
 	</section>
-	<section class="advantages">
+	<section class="advantages" id="advantages">
 		<div class="advantages-container container">
 			<h2>Преимущества</h2>
 			<ul class="advantages__list">
@@ -40,7 +40,7 @@
 			</ul>
 		</div>
 	</section>
-	<section class="offer">
+	<section class="offer" id="offer">
 		<div class="offer-container container">
 			<h2>Ближайшие круизы</h2>
 			<ul>
@@ -183,13 +183,13 @@
 			</ul>
 		</div>
 	</section>
-	<section class="feedback">
+	<section class="feedback" id="feedback">
 		<div class="feedback-container container">
 			<div class="feedback__text">
 				<h2 class="feedback__text-title">Раннее бронирование</h2>
 				<p class="feedback__text-subtitle">Забронируйте тур за 3-6 месяцев до даты выезда и сэкономьте до 50%</p>
 			</div>
-			<form class="feedback__form" action="https://echo.htmlacademy.ru/courses" method="get" data-form="">
+			<form class="feedback__form" action="https://echo.htmlacademy.ru" method="post" data-form>
 				<p class="feedback__form-description">
 					Оставьте заявку и мы свяжемся с вами в ближайшее время
 				</p>
@@ -198,15 +198,15 @@
 					<p class="feedback__form-group">
 						<label>
 							<span class="visually-hidden">Введите ваше имя.</span>
-							<input type="text" placeholder="Имя" name="name" pattern="^[A-Za-zА-Яа-яЁё\- ]+$" required/>
+							<input id="order-name" type="text" placeholder="Имя" name="name" pattern="^[A-Za-zА-Яа-яЁё\- ]+$" required/>
 						</label>
 						<label>
 							<span class="visually-hidden">Введите ваш номер телефона.</span>
-							<input type="tel" placeholder="Телефон" name="phone" pattern="^\+7\(\d{3}\)\d{7}$" data-mask="+7(###)#######" required/>
+							<input id="order-phone" type="tel" placeholder="Телефон" name="phone" pattern="^\+7\(\d{3}\)\d{7}$" data-mask="+7(###)#######" required/>
 						</label>
 						<label>
 							<span class="visually-hidden">Введите ваш номер телефона.</span>
-							<input type="email" placeholder="Email" name="email" required/>
+							<input id="order-email" type="email" placeholder="Email" name="email" required/>
 						</label>
 					</p>
 				</fieldset>
@@ -214,7 +214,7 @@
 					<legend class="visually-hidden">Согласие на обработку ваших персональных данных</legend>
 					<p class="feedback__form-group feedback__form-group--bottom">
 						<label>
-							<input name="agreement" type="checkbox" checked required/>
+							<input name="agree" type="checkbox" checked required/>
 							<span>Я согласен на обработку моих  персональных данных</span>
 						</label>
 						<button type="submit">Оставить заявку</button>
@@ -223,7 +223,7 @@
 			</form>
 		</div>
 	</section>
-	<section class="contacts">
+	<section class="contacts" id="contacts">
 		<div class="contacts-container container">
 			<div class="contacts__map" data-map id="map"></div>
 			<div class="contacts__content">

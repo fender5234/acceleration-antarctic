@@ -32,7 +32,11 @@
   font-family: $ff-montserrat;
   line-height: 20px;
   font-weight: 500;
-  color: $color-alice-blue;
+  color: inherit;
+
+  &--footer {
+    color: $color-alice-blue;
+  }
 
   @include vp-1023 {
     font-size: 14px;

@@ -1,3 +1,7 @@
+.header {
+  color: $color-alice-blue;
+}
+
 .header__container {
   display: flex;
   padding: 33px 45px;
@@ -13,7 +17,7 @@
 
 .header__logo {
   flex-shrink: 0;
-  margin-right: 200px;
+  fill: $color-alice-blue;
 
   @include vp-1023 {
     margin-right: 114px;
@@ -33,9 +37,7 @@
 
 .header__button {
   display: none;
-}
 
-.header__button.is-active {
   @include vp-767 {
     display: block;
     margin: 4px 0 0 auto;
@@ -59,17 +61,78 @@
   }
 }
 
-.header__button.is-open {
+.header.is-active {
+  color: $color-tangaroa;
+
+  .header__list {
+    padding: 75px 0 0 22px;
+    flex-direction: column;
+  }
+
+  .header__list-item {
+    padding: 10px 3px;
+    margin: 0 0 6px 0;
+  }
+
+  .header__nav {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 89%;
+    background-color: $color-alice-blue;
+  }
+
+  .header__logo {
+    z-index: 1;
+    fill: currentColor;
+    margin: -1px 0 0 10%;
+  }
+
+  .header__button {
+    @include vp-767 {
+      &::before {
+        top: 0;
+        left: 10px;
+        width: 26px;
+        height: 17px;
+        background-color: $color-tangaroa;
+        mask-image: url("/img/sprite/icon-close.svg");
+        mask-repeat: no-repeat;
+      }
+    }
+  }
+}
+
+.header.no-js {
+  .header__button {
+    display: none;
+  }
+
   @include vp-767 {
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 10px;
-      width: 24px;
-      height: 15px;
-      background-color: $color-tangaroa;
-      mask-image: url("/img/sprite/icon-close.svg");
+    background-color: $color-alice-blue;
+
+    .header__container {
+      flex-direction: column;
+    }
+
+    .header__nav {
+      display: block;
+      color: $color-tangaroa;
+    }
+
+    .header__logo {
+      margin-bottom: 30px;
+      fill: $color-tangaroa;
+    }
+
+    .header__list {
+      flex-direction: column;
+    }
+
+    .header__list-item {
+      margin: 0;
     }
   }
 }
