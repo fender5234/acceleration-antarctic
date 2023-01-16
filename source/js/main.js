@@ -1,4 +1,3 @@
-// import initForm from './modules/form.js';
 import initMaps from './modules/map.js';
 import initPageHeader from './modules/page-header.js';
 
@@ -33,7 +32,6 @@ window.addEventListener('load', () => {
     }
 
     initMaps(document.querySelectorAll('[data-map][id]'));
-    // document.querySelectorAll('[data-form]').forEach(initForm);
 
     document.querySelectorAll('[data-lazy-style]').forEach((lazyStyledElement) => {
       lazyStyledElement.setAttribute('style', lazyStyledElement.dataset.lazyStyle);
