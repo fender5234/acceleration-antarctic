@@ -562,11 +562,6 @@ input[type=number]::-webkit-inner-spin-button {
   display: none;
 }
 
-.no-transition {
-  /* stylelint-disable-next-line */
-  transition: none !important;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -620,11 +615,6 @@ html {
   list-style-type: none;
 }
 
-.nav__list--active {
-  padding: 55px 0 0;
-  flex-direction: column;
-}
-
 .nav__link {
   font-size: 16px;
   font-family: "Montserrat", "Arial", sans-serif;
@@ -641,11 +631,6 @@ html {
   margin-left: 33px;
 }
 
-.nav__list-item--active {
-  padding: 10px 3px;
-  margin: 0 0 6px 0;
-}
-
 .header {
   color: #f9fbfd;
 }
@@ -658,10 +643,6 @@ html {
 .header__logo {
   flex-shrink: 0;
   fill: #f9fbfd;
-}
-
-.header__logo--active {
-  margin: 0 0 0 35px;
 }
 
 .header__button {
@@ -690,12 +671,17 @@ html {
   height: 100%;
   width: 89%;
   background-color: #f9fbfd;
+  z-index: 1;
 }
 
 .header.is-active .header__logo {
-  z-index: 1;
+  z-index: 2;
   fill: currentColor;
   margin: -1px 0 0 10%;
+}
+
+.header.is-active .header__button {
+  z-index: 1;
 }
 
 .header.no-js .header__button {
@@ -1131,33 +1117,6 @@ html {
   display: flex;
   align-items: center;
   margin-bottom: 30px;
-}
-
-label[for] {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  border: 0;
-  clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-}
-
-[name] ~ strong {
-  display: none;
-  width: 100%;
-  margin: 5px 0 0;
-  font-weight: inherit;
-  font-size: 12px;
-  color: #ff6982;
-}
-
-.form__group.is-validable :invalid ~ strong {
-  display: block;
 }
 
 .contacts h2 {
@@ -1665,6 +1624,10 @@ label[for] {
       background-image: url("../img/background-mobile.webp");
     }
 }
+
+  .promo::before {
+    content: none;
+  }
 
   .promo h1 {
     font-size: 36px;
