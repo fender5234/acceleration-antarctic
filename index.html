@@ -9,29 +9,31 @@
 
 <body>
   <div class="page">
-    <div class="header-top" data-header="">
-      <header class="header">
+    <div class="header-top">
+      <header class="header no-js" data-header="">
         <div class="header__container container">
           <a aria-current="page" class="header__logo logo-link" aria-label="Переход на главную страницу">
-            <img class="header__logo-image" src="img/logo.svg" height="38" width="70" alt="Логотип компании - Круизы по Антарктике.">
+            <svg class="header__logo logo-link" width="70" height="38" viewbox="0 0 70 38" focusable="false">
+              <use xlink:href="img/logo.svg#logo"></use>
+            </svg>
           </a>
-          <nav class="nav header-top__nav">
-            <ul class="nav__list header-top__list">
-              <li class="nav__list-item  header-top__list-item">
-                <a href="#" class="nav__link header-top__link">Преимущества</a>
+          <nav class="nav header__nav">
+            <ul class="nav__list header__list">
+              <li class="nav__list-item  header__list-item">
+                <a href="#advantages" class="nav__link">Преимущества</a>
               </li>
-              <li class="nav__list-item header-top__list-item">
-                <a href="#" class="nav__link header-top__link">Направления</a>
+              <li class="nav__list-item header__list-item">
+                <a href="#feedback" class="nav__link">Направления</a>
               </li>
-              <li class="nav__list-item header-top__list-item">
-                <a href="#" class="nav__link header-top__link">Ближайшие круизы</a>
+              <li class="nav__list-item header__list-item">
+                <a href="#offer" class="nav__link">Ближайшие круизы</a>
               </li>
-              <li class="nav__list-item header-top__list-item">
-                <a href="#" class="nav__link header-top__link">Контакты</a>
+              <li class="nav__list-item header__list-item">
+                <a href="#contacts" class="nav__link">Контакты</a>
               </li>
             </ul>
           </nav>
-          <button class="header__button" type="button" aria-label="Кнопка для открытия меню" data-button=""></button>
+          <button class="header__button" type="button" aria-label="Кнопка для открытия меню" data-button="" aria-expanded="false"></button>
         </div>
       </header>
 
@@ -64,7 +66,7 @@
         </div>
       </section>
 
-      <section class="advantages">
+      <section class="advantages" id="advantages">
         <div class="advantages-container container">
           <h2>Преимущества</h2>
           <ul class="advantages__list">
@@ -88,7 +90,7 @@
         </div>
       </section>
 
-      <section class="offer">
+      <section class="offer" id="offer">
         <div class="offer-container container">
           <h2>Ближайшие круизы</h2>
           <ul>
@@ -232,13 +234,13 @@
         </div>
       </section>
 
-      <section class="feedback">
+      <section class="feedback" id="feedback">
         <div class="feedback-container container">
           <div class="feedback__text">
             <h2 class="feedback__text-title">Раннее бронирование</h2>
             <p class="feedback__text-subtitle">Забронируйте тур за&nbsp;3-6 месяцев до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
           </div>
-          <form class="feedback__form" action="https://echo.htmlacademy.ru/courses" method="get" data-form="">
+          <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post" data-form="">
             <p class="feedback__form-description">
               Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время
             </p>
@@ -247,15 +249,15 @@
               <p class="feedback__form-group">
                 <label>
                   <span class="visually-hidden">Введите ваше имя.</span>
-                  <input type="text" placeholder="Имя" name="name" pattern="^[A-Za-zА-Яа-яЁё\- ]+$" required="">
+                  <input id="order-name" type="text" placeholder="Имя" name="name" pattern="^[A-Za-zА-Яа-яЁё\- ]+$" required="">
                 </label>
                 <label>
                   <span class="visually-hidden">Введите ваш номер телефона.</span>
-                  <input type="tel" placeholder="Телефон" name="phone" pattern="^\+7\(\d{3}\)\d{7}$" data-mask="+7(###)#######" required="">
+                  <input id="order-phone" type="tel" placeholder="Телефон" name="phone" pattern="^\+7\(\d{3}\)\d{7}$" data-mask="+7(###)#######" required="">
                 </label>
                 <label>
                   <span class="visually-hidden">Введите ваш номер телефона.</span>
-                  <input type="email" placeholder="Email" name="email" required="">
+                  <input id="order-email" type="email" placeholder="Email" name="email" required="">
                 </label>
               </p>
             </fieldset>
@@ -263,7 +265,7 @@
               <legend class="visually-hidden">Согласие на&nbsp;обработку ваших персональных данных</legend>
               <p class="feedback__form-group feedback__form-group--bottom">
                 <label>
-                  <input name="agreement" type="checkbox" checked="" required="">
+                  <input name="agree" type="checkbox" checked="" required="">
                   <span>Я&nbsp;согласен на&nbsp;обработку моих персональных данных</span>
                 </label>
                 <button type="submit">Оставить заявку</button>
@@ -273,7 +275,7 @@
         </div>
       </section>
 
-      <section class="contacts">
+      <section class="contacts" id="contacts">
         <div class="contacts-container container">
           <div class="contacts__map" data-map="" id="map"></div>
           <div class="contacts__content">
@@ -295,22 +297,24 @@
 
     <footer class="footer">
       <div class="footer-container container">
-        <a aria-current="page" class="logo-link footer__logo" aria-label="Переход на главную страницу">
-          <img src="img/logo.svg" height="38" width="70" alt="Логотип компании - Круизы по Антарктике">
+        <a aria-current="page" class="footer__logo-link" aria-label="Переход на главную страницу">
+          <svg class="footer__logo" width="70" height="38" viewbox="0 0 70 38" focusable="false">
+            <use xlink:href="img/logo.svg#logo"></use>
+          </svg>
         </a>
         <nav class="nav footer__nav">
           <ul class="nav__list footer__nav-list">
             <li class="nav__list-item">
-              <a href="#" class="nav__link">Преимущества</a>
+              <a href="#" class="nav__link nav__link--footer">Преимущества</a>
             </li>
             <li class="nav__list-item">
-              <a href="#" class="nav__link">Направления</a>
+              <a href="#" class="nav__link nav__link--footer">Направления</a>
             </li>
             <li class="nav__list-item">
-              <a href="#" class="nav__link">Ближайшие круизы</a>
+              <a href="#" class="nav__link nav__link--footer">Ближайшие круизы</a>
             </li>
             <li class="nav__list-item">
-              <a href="#" class="nav__link">Контакты</a>
+              <a href="#" class="nav__link nav__link--footer">Контакты</a>
             </li>
           </ul>
         </nav>

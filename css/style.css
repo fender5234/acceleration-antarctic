@@ -567,6 +567,10 @@ input[type=number]::-webkit-inner-spin-button {
   transition: none !important;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   width: 100%;
   max-width: 1250px;
@@ -626,6 +630,10 @@ input[type=number]::-webkit-inner-spin-button {
   font-family: "Montserrat", "Arial", sans-serif;
   line-height: 20px;
   font-weight: 500;
+  color: inherit;
+}
+
+.nav__link--footer {
   color: #f9fbfd;
 }
 
@@ -638,6 +646,10 @@ input[type=number]::-webkit-inner-spin-button {
   margin: 0 0 6px 0;
 }
 
+.header {
+  color: #f9fbfd;
+}
+
 .header__container {
   display: flex;
   padding: 33px 45px;
@@ -645,7 +657,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 .header__logo {
   flex-shrink: 0;
-  margin-right: 200px;
+  fill: #f9fbfd;
 }
 
 .header__logo--active {
@@ -653,6 +665,40 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .header__button {
+  display: none;
+}
+
+.header.is-active {
+  color: #011c40;
+}
+
+.header.is-active .header__list {
+  padding: 75px 0 0 22px;
+  flex-direction: column;
+}
+
+.header.is-active .header__list-item {
+  padding: 10px 3px;
+  margin: 0 0 6px 0;
+}
+
+.header.is-active .header__nav {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 89%;
+  background-color: #f9fbfd;
+}
+
+.header.is-active .header__logo {
+  z-index: 1;
+  fill: currentColor;
+  margin: -1px 0 0 10%;
+}
+
+.header.no-js .header__button {
   display: none;
 }
 
@@ -681,34 +727,6 @@ input[type=number]::-webkit-inner-spin-button {
   }
 }
 
-.header-top.is-active .header__logo {
-  margin: 0 0 0 35px;
-}
-
-.header-top.is-active .header-top__list {
-  padding: 75px 0 0 22px;
-  flex-direction: column;
-}
-
-.header-top.is-active .header-top__list-item {
-  padding: 10px 3px;
-  margin: 0 0 6px 0;
-}
-
-.header-top.is-active .header-top__nav {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 89%;
-  background-color: #f9fbfd;
-}
-
-.header-top.is-active .header-top__link {
-  color: #011c40;
-}
-
 .promo h1 {
   margin: 0 0 12px;
   padding: 0;
@@ -729,7 +747,19 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .promo-container {
-  padding: 167px 50px 278px 141px;
+  padding: 160px 50px 278px 141px;
+}
+
+.promo-container::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 160px;
+  width: 100%;
+  height: 168px;
+  background: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%);
+  z-index: 1;
 }
 
 .description {
@@ -863,6 +893,18 @@ input[type=number]::-webkit-inner-spin-button {
   position: relative;
   padding: 29px 25px 14px;
   background-color: #011c40;
+}
+
+.offer li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 168px;
+  background: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%);
+  z-index: 1;
 }
 
 .offer li:hover,
@@ -1167,6 +1209,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .footer__logo {
+  fill: #f9fbfd;
   margin: 0;
 }
 
@@ -1177,8 +1220,8 @@ input[type=number]::-webkit-inner-spin-button {
 .footer__social-list {
   display: flex;
   align-items: center;
-  margin: 0 0 0 auto;
-  padding-top: 4px;
+  margin: -3px 0 0 auto;
+  padding: 0;
   list-style-type: none;
 }
 
@@ -1290,6 +1333,10 @@ input[type=number]::-webkit-inner-spin-button {
 
   .promo-container {
     padding: 187px 50px 277px 45px;
+  }
+
+  .promo-container::before {
+    content: none;
   }
 
   .description-container {
@@ -1425,16 +1472,17 @@ input[type=number]::-webkit-inner-spin-button {
   }
 
   .footer-container {
-    padding: 48px 36px 32px 45px;
+    padding: 48px 36px 26px 45px;
   }
 
   .footer__logo {
     padding-top: 2px;
-    width: 40px;
+    width: 38px;
+    height: 23px;
   }
 
   .footer__social-list {
-    padding: 0;
+    margin: 0 0 0 auto;
   }
 
   .footer__social-link::before {
@@ -1517,7 +1565,7 @@ input[type=number]::-webkit-inner-spin-button {
     width: 42px;
   }
 
-  .header__button.is-active {
+  .header__button {
     display: block;
     margin: 4px 0 0 auto;
     position: relative;
@@ -1527,7 +1575,7 @@ input[type=number]::-webkit-inner-spin-button {
     background-color: transparent;
   }
 
-  .header__button.is-active::before {
+  .header__button::before {
     content: "";
     position: absolute;
     top: 0;
@@ -1541,16 +1589,42 @@ input[type=number]::-webkit-inner-spin-button {
     mask-repeat: no-repeat;
   }
 
-  .header__button.is-open::before {
-    content: "";
-    position: absolute;
+  .header.is-active .header__button::before {
     top: 0;
     left: 10px;
-    width: 24px;
-    height: 15px;
+    width: 26px;
+    height: 17px;
     background-color: #011c40;
     -webkit-mask-image: url("/img/sprite/icon-close.svg");
     mask-image: url("/img/sprite/icon-close.svg");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+  }
+
+  .header.no-js {
+    background-color: #f9fbfd;
+  }
+
+  .header.no-js .header__container {
+    flex-direction: column;
+  }
+
+  .header.no-js .header__nav {
+    display: block;
+    color: #011c40;
+  }
+
+  .header.no-js .header__logo {
+    margin-bottom: 30px;
+    fill: #011c40;
+  }
+
+  .header.no-js .header__list {
+    flex-direction: column;
+  }
+
+  .header.no-js .header__list-item {
+    margin: 0;
   }
 
 @supports not (background-image: url("../img/background-mobile.webp")) {
@@ -1564,30 +1638,6 @@ input[type=number]::-webkit-inner-spin-button {
       background-image: url("../img/background-mobile.webp");
     }
 }
-
-  .header-top.is-active .header__button {
-    display: block;
-    margin: 4px 0 0 auto;
-    position: relative;
-    border: none;
-    width: 24px;
-    height: 16px;
-    background-color: transparent;
-  }
-
-  .header-top.is-active .header__button::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 24px;
-    height: 14px;
-    background-color: #f9fbfd;
-    -webkit-mask-image: url("/img/sprite/icon-burger.svg");
-    mask-image: url("/img/sprite/icon-burger.svg");
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-  }
 
   .promo h1 {
     font-size: 36px;
@@ -1787,7 +1837,7 @@ input[type=number]::-webkit-inner-spin-button {
 
   .footer__nav-list {
     flex-direction: column;
-    padding-top: 22px;
+    padding-top: 16px;
     margin: 0 0 10px;
   }
 
