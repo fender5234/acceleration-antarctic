@@ -692,6 +692,7 @@ html {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2509803922);
 }
 
 @supports not (background-image: url("../img/background-desktop.webp")) {
@@ -704,22 +705,6 @@ html {
   .header-top {
     background-image: url("../img/background-desktop.webp");
   }
-}
-
-.promo {
-  position: relative;
-}
-
-.promo::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 168px;
-  background: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%);
-  z-index: 1;
 }
 
 .promo h1 {
@@ -1248,8 +1233,8 @@ html {
 
 .footer__social-link--reddit::before {
   left: 5px;
-  -webkit-mask-image: url("../sprite.svg#icon-reddit");
-  mask-image: url("../sprite.svg#icon-reddit");
+  -webkit-mask-image: url("../img/sprite.svg#icon-reddit");
+  mask-image: url("../img/sprite.svg#icon-reddit");
 }
 
 .footer__social-list-item {
