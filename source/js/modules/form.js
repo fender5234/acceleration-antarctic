@@ -1,5 +1,5 @@
 export default (formElement, id = 0) => {
-  const fieldElements = formElement.querySelector('[name]');
+  const fieldElements = formElement.querySelectorAll('[name]');
 
   fieldElements.forEach((fieldElement) => {
     const {name, type} = fieldElement;
