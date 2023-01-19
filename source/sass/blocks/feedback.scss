@@ -22,7 +22,6 @@
   font-weight: 700;
   font-size: 40px;
   line-height: 60px;
-  font-family: $ff-montserrat;
   color: $color-tangaroa;
 
   @include vp-1023 {
@@ -44,7 +43,6 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
-  font-family: $ff-montserrat;
   color: $color-tangaroa;
 
   @include vp-1023 {
@@ -127,7 +125,6 @@
   margin: 0;
   font-weight: 500;
   font-size: 18px;
-  font-family: $ff-montserrat;
   line-height: 27px;
   color: $color-alice-blue;
 
@@ -138,7 +135,6 @@
 }
 
 .feedback__form-group span {
-  font-family: $ff-montserrat;
   font-size: 10px;
   line-height: 13px;
   color: $color-alice-blue;
@@ -152,7 +148,6 @@
 
 .feedback input:not([type="checkbox"]) {
   padding: 10px 2px 12px 16px;
-  font-family: $ff-montserrat;
   font-size: 14px;
   line-height: 21px;
   width: 100%;
@@ -197,7 +192,7 @@
 }
 
 .feedback button {
-  font-family: $ff-montserrat;
+  font-family: inherit;
   font-size: 14px;
   line-height: 21px;
   font-weight: 600;

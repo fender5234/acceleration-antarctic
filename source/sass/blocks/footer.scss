@@ -112,24 +112,3 @@
     margin: 0 13px 0 -5px;
   }
 }
-
-.footer__nav .nav__link {
-  @include vp-1023 {
-    font-size: 12px;
-    line-height: 14px;
-  }
-}
-
-.footer__nav-list {
-  @include vp-767 {
-    flex-direction: column;
-    padding-top: 16px;
-    margin: 0 0 10px;
-  }
-}
-
-.footer__nav-list .nav__list-item {
-  @include vp-767 {
-    margin: 0 0 8px;
-  }
-}

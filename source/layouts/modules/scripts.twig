@@ -2,13 +2,11 @@
 <script src="js/main.min.js{{ version }}"></script>
 
 {% if isDev and page == 'index' %}
-	<script>
-		window.pixelperfect = {
-breakpoints: [
-320,321, 768, 1366
-],
-ext: 'webp'
-};
-	</script>
-	<script src="https://efiand.github.io/pixelperfect/pixelperfect.min.js"></script>
+<script>
+	window.pixelperfect = {
+		breakpoints: [320, 321, 768, 1366],
+		ext: 'webp'
+	};
+</script>
+<script src="https://efiand.github.io/pixelperfect/pixelperfect.min.js"></script>
 {% endif %}
