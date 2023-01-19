@@ -579,7 +579,7 @@ html {
   font-weight: 600;
   font-size: 14px;
   line-height: 1.5;
-  font-family: "Montserrat", "Arial", sans-serif;
+  font-family: inherit;
   text-align: center;
   overflow-wrap: anywhere;
   color: #011c40;
