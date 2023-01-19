@@ -713,7 +713,6 @@ html {
   font-size: 54px;
   font-weight: 700;
   line-height: 65px;
-  font-family: "Montserrat", "Arial", sans-serif;
   color: #f9fbfd;
 }
 
@@ -722,7 +721,6 @@ html {
   padding: 0;
   font-size: 20px;
   line-height: 24px;
-  font-family: "Montserrat", "Arial", sans-serif;
   color: #f9fbfd;
 }
 
@@ -745,7 +743,6 @@ html {
   margin: 0 0 24px;
   padding-top: 56px;
   font-size: 28px;
-  font-family: "Montserrat", "Arial", sans-serif;
   line-height: 42px;
   font-weight: 600;
   color: #011c40;
@@ -755,7 +752,6 @@ html {
   margin: 0;
   padding-right: 30px;
   font-size: 16px;
-  font-family: "Montserrat", "Arial", sans-serif;
   line-height: 24px;
   color: #011c40;
 }
@@ -764,7 +760,6 @@ html {
   text-align: center;
   margin: 0 0 49px;
   font-size: 28px;
-  font-family: "Montserrat", "Arial", sans-serif;
   line-height: 42px;
   font-weight: 600;
   color: #011c40;
@@ -807,7 +802,6 @@ html {
   margin: 0 0 8px;
   padding: 0;
   font-size: 18px;
-  font-family: "Montserrat", "Arial", sans-serif;
   line-height: 27px;
   font-weight: 500;
   color: #011c40;
@@ -817,7 +811,6 @@ html {
   margin: 0;
   padding: 0;
   font-size: 14px;
-  font-family: "Montserrat", "Arial", sans-serif;
   line-height: 20px;
   color: #011c40;
 }
@@ -835,7 +828,6 @@ html {
   text-align: center;
   margin: 0 0 50px;
   font-size: 28px;
-  font-family: "Montserrat", "Arial", sans-serif;
   line-height: 42px;
   font-weight: 600;
   color: #011c40;
@@ -899,7 +891,6 @@ html {
   position: relative;
   margin: auto 0 9px 5px;
   font-size: 18px;
-  font-family: "Montserrat", "Arial", sans-serif;
   line-height: 27px;
   font-weight: 500;
   color: #f9fbfd;
@@ -909,7 +900,6 @@ html {
 .offer h4 {
   margin: 0 0 1px;
   font-size: 14px;
-  font-family: "Montserrat", "Arial", sans-serif;
   line-height: 20px;
   font-weight: 500;
   color: #f9fbfd;
@@ -918,7 +908,6 @@ html {
 .offer p {
   margin: 0 0 11px;
   font-size: 14px;
-  font-family: "Montserrat", "Arial", sans-serif;
   line-height: 20px;
   color: #f9fbfd;
 }
@@ -928,7 +917,6 @@ html {
   margin-top: 25px;
   text-align: center;
   background-color: #f9fbfd;
-  font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 600;
   font-size: 14px;
   line-height: 21px;
@@ -976,7 +964,6 @@ html {
   font-weight: 700;
   font-size: 40px;
   line-height: 60px;
-  font-family: "Montserrat", "Arial", sans-serif;
   color: #011c40;
 }
 
@@ -986,7 +973,6 @@ html {
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
-  font-family: "Montserrat", "Arial", sans-serif;
   color: #011c40;
 }
 
@@ -1027,13 +1013,11 @@ html {
   margin: 0;
   font-weight: 500;
   font-size: 18px;
-  font-family: "Montserrat", "Arial", sans-serif;
   line-height: 27px;
   color: #f9fbfd;
 }
 
 .feedback__form-group span {
-  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 10px;
   line-height: 13px;
   color: #f9fbfd;
@@ -1042,7 +1026,6 @@ html {
 
 .feedback input:not([type=checkbox]) {
   padding: 10px 2px 12px 16px;
-  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 14px;
   line-height: 21px;
   width: 100%;
@@ -1082,7 +1065,7 @@ html {
 }
 
 .feedback button {
-  font-family: "Montserrat", "Arial", sans-serif;
+  font-family: inherit;
   font-size: 14px;
   line-height: 21px;
   font-weight: 600;
@@ -1100,14 +1083,12 @@ html {
 .contacts h2 {
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 18px;
   line-height: 27px;
   font-weight: 500;
 }
 
 .contacts ul {
-  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 16px;
   line-height: 24px;
   margin: 0;
@@ -1460,11 +1441,6 @@ html {
   .footer__social-list-item {
     margin-left: 8px;
   }
-
-  .footer__nav .nav__link {
-    font-size: 12px;
-    line-height: 14px;
-  }
 }
 
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
@@ -1572,8 +1548,8 @@ html {
     width: 26px;
     height: 17px;
     background-color: #011c40;
-    -webkit-mask-image: url("../sprite/icon-close.svg");
-    mask-image: url("../sprite/icon-close.svg");
+    -webkit-mask-image: url("../img/sprite/icon-close.svg");
+    mask-image: url("../img/sprite/icon-close.svg");
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
   }
@@ -1814,16 +1790,6 @@ html {
 
   .footer__social-list-item {
     margin: 0 13px 0 -5px;
-  }
-
-  .footer__nav-list {
-    flex-direction: column;
-    padding-top: 16px;
-    margin: 0 0 10px;
-  }
-
-  .footer__nav-list .nav__list-item {
-    margin: 0 0 8px;
   }
 }
 
