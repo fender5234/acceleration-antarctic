@@ -18,10 +18,10 @@
 }
 
 .advantages__container {
-  padding: 110px 45px 120px;
+  padding: 110px 45px 90px;
 
   @include vp-1023 {
-    padding: 90px 45px 100px;
+    padding: 90px 45px 71px;
   }
 
   @include vp-767 {
@@ -94,6 +94,7 @@
 .advantages__list li {
   background-color: $color-alice-blue;
   padding: 30px 30px 46px;
+  margin-bottom: 30px;
 
   @include vp-1023 {
     padding: 26px 10px 19px 20px;

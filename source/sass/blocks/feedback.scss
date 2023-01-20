@@ -61,6 +61,7 @@
 .feedback__container {
   display: flex;
   padding: 50px 105px;
+  align-items: flex-start;
   justify-content: space-between;
 
   @include vp-1023 {

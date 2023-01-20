@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* stylelint-disable */
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -766,7 +768,7 @@ html {
 }
 
 .advantages__container {
-  padding: 110px 45px 120px;
+  padding: 110px 45px 90px;
 }
 
 .advantages {
@@ -818,6 +820,7 @@ html {
 .advantages__list li {
   background-color: #f9fbfd;
   padding: 30px 30px 46px;
+  margin-bottom: 30px;
 }
 
 .advantages__list img {
@@ -880,6 +883,7 @@ html {
 .offer li:hover .offer__content,
 .offer li:focus-within .offer__content {
   display: block;
+  z-index: 1;
 }
 
 .offer li:hover img,
@@ -895,6 +899,22 @@ html {
   font-weight: 500;
   color: #f9fbfd;
   z-index: 1;
+}
+
+.offer h3::before {
+  content: "“";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+}
+
+.offer h3::after {
+  content: "”";
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
 }
 
 .offer h4 {
@@ -921,6 +941,10 @@ html {
   font-size: 14px;
   line-height: 21px;
   padding: 10px 20px;
+}
+
+.offer a:focus-visible {
+  outline: 2px solid #f9fbfd;
 }
 
 .offer img {
@@ -979,6 +1003,7 @@ html {
 .feedback__container {
   display: flex;
   padding: 50px 105px;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
@@ -1311,7 +1336,7 @@ html {
   }
 
   .advantages__container {
-    padding: 90px 45px 100px;
+    padding: 90px 45px 71px;
   }
 
 @supports not (background-image: url("../img/advantages-background-tablet.webp")) {
@@ -1420,7 +1445,7 @@ html {
   }
 
   .footer__container {
-    padding: 48px 36px 26px 45px;
+    padding: 48px 36px 41px 45px;
   }
 
   .footer__logo {

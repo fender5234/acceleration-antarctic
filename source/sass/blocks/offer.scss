@@ -87,6 +87,7 @@
 
     .offer__content {
       display: block;
+      z-index: 1;
     }
 
     img {
@@ -110,6 +111,22 @@
 
   @include vp-767 {
     margin: auto 0 3px 0;
+  }
+
+  &::before {
+    content: "“";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+  }
+
+  &::after {
+    content: "”";
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
   }
 }
 
@@ -137,6 +154,10 @@
   font-size: 14px;
   line-height: 21px;
   padding: 10px 20px;
+
+  &:focus-visible {
+    outline: 2px solid $color-alice-blue;
+  }
 }
 
 .offer img {
