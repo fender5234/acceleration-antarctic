@@ -667,6 +667,7 @@ html {
   width: 89%;
   background-color: #f9fbfd;
   z-index: 1;
+  box-shadow: -35px 0 0 rgba(0, 43, 102, 0.5);
 }
 
 .header.is-active .header__logo {
