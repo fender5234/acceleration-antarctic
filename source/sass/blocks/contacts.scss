@@ -95,16 +95,15 @@
 
 .contacts__map {
   flex-shrink: 0;
-  width: 560px;
+  width: 48%;
   height: 306px;
 
   @include vp-1023 {
-    width: 324px;
     height: 335px;
   }
 
   @include vp-767 {
-    width: 290px;
+    width: 100%;
     height: 316px;
     order: 2;
   }

@@ -53,10 +53,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 0 40px;
-  align-items: flex-start;
 
   @include vp-1023 {
-    align-items: stretch;
     grid-gap: 29px;
   }
 

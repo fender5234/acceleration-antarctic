@@ -58,10 +58,23 @@
 }
 
 .header.is-active {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 89%;
+  overflow-y: scroll;
+  background-color: $color-alice-blue;
   color: $color-tangaroa;
+  box-shadow: -10em 0 0 rgb(0 43 102 / 50%);
+
+  .header__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 
   .header__list {
-    padding: 75px 0 0 22px;
+    padding: 31px 0 0 6px;
     flex-direction: column;
   }
 
@@ -72,24 +85,21 @@
 
   .header__nav {
     display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 89%;
-    background-color: $color-alice-blue;
-    z-index: 1;
-    box-shadow: -35px 0 0 rgb(0 43 102 / 50%);
+    grid-column: 1/3;
+    // box-shadow: -10em 0 0 rgb(0 43 102 / 50%);
   }
 
   .header__logo {
+    grid-column: 1/2;
     z-index: 2;
     fill: currentColor;
-    margin: -1px 0 0 10%;
+    margin: -1px 0 0 0;
   }
 
   .header__button {
     z-index: 1;
+    grid-column: 2/3;
+    grid-row: 1/2;
 
     @include vp-767 {
       &::before {
